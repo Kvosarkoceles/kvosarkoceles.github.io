@@ -194,10 +194,9 @@ El script produce:
 
 | Archivo | Origen | Herramienta |
 | :--- | :--- | :--- |
-| `cv-github/cv/Miguel-Mendoza-CV.pdf` | `cv-github/cv/print.html` | Chrome / Chromium headless |
 | `cv/Miguel-Mendoza-CV.pdf` | `cv/print.html` | Chrome / Chromium headless |
 | `assets/img/og-image.png` | `scripts/og-source.html` | Chrome / Chromium headless |
-| `
+| `assets/img/apple-touch-icon.png` | `scripts/generate-assets.sh` | ImageMagick 7 (`magick`) |
 Requisitos: `google-chrome` (o `chromium`) para el PDF y la imagen Open Graph, e ImageMagick 7
 (`magick`) para el icono. Si Chrome no está disponible, el PDF puede generarse desde el navegador
 imprimiendo `cv/print.html` como PDF.
@@ -298,7 +297,7 @@ si se usa un subdominio.
 | `TU-PERFIL-LINKEDIN` | `index.html`, `cv/print.html`, y el `README.md` del repo de perfil | URL real de LinkedIn |
 | `TU-CORREO@EJEMPLO.COM` | los mismos archivos | Correo real de contacto |
 | Enlaces `Repositorio` de cada proyecto | `index.html`, sección Proyectos, y la tabla del `README.md` de perfil | URL de cada repositorio |
-| `Demo` de cada proyecto | `index.html`: `<span class="project-link is-disabled">` | Convertir en `<a href="…">` cuando exista demo |
+| `Demo` de cada proyecto | `index.html`: `<span class="project-link is-disabled">` | Convertir en `<a href="…">` cuando exista demo. Farmacia Dulce Esperanza ya apunta a `https://farma-web-rho.vercel.app/` |
 | `Estado` de cada proyecto | `index.html`: bloque comentado `<span class="status">` | Descomentar y fijar el valor real |
 | `apple-touch-icon.png` | `assets/img/` | Se regenera con `scripts/generate-assets.sh` |
 | URLs `raw.githubusercontent.com/Kvosarkoceles/Kvosarkoceles/main/assets/…` | `README.md` del repo de perfil (banner, divisor y pie) | Se usan URLs absolutas porque GitHub no siempre resuelve rutas relativas al mostrar el README en el perfil. Si cambias de rama o de usuario, actualiza esas referencias |

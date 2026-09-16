@@ -11,8 +11,8 @@
 set -euo pipefail
 
 RAIZ="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-IMG="$RAIZ/cv-github/assets/img"
-CV="$RAIZ/cv-github/cv"
+IMG="$RAIZ/assets/img"
+CV="$RAIZ/cv"
 
 FONT_MONO=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
 
