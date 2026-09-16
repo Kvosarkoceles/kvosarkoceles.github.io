@@ -95,8 +95,9 @@ del perfil: **GPS, telemetría y monitoreo en tiempo real**.
 Cabecera fija        marca · navegación por secciones · botón de tema · botón "CV PDF"
 Hero                 nombre → rol → resumen → ubicación → CTA (PDF) → enlaces → stack principal
 01 Perfil            relato profesional + tarjeta de datos rápidos
-02 Experiencia       timeline: STI Solutions, Grupo Digital Systems, CIMAC, experiencia previa
-03 Proyectos         tarjetas: Farmacia Dulce Esperanza, Sistema de monitoreo GPS
+02 Experiencia       timeline: Sitrack México, Freelance (T7Group / CÍMAC), STI Solutions,
+                     Grupo Digital Systems, CIMAC, experiencia previa
+03 Proyectos         tarjetas: Farmacia Dulce Esperanza, Sistema de monitoreo GPS, RoadSentinel
 04 Habilidades       seis categorías: backend, frontend, bases de datos, cloud, integraciones, datos
 05 Educación         UNAM + nota de experiencia previa
 06 Contacto          correo, GitHub, LinkedIn, ubicación + CTA de descarga
@@ -295,7 +296,7 @@ si se usa un subdominio.
 | Marcador | Dónde | Acción |
 | :--- | :--- | :--- |
 | `TU-PERFIL-LINKEDIN` | `index.html`, `cv/print.html`, y el `README.md` del repo de perfil | URL real de LinkedIn |
-| `TU-CORREO@EJEMPLO.COM` | los mismos archivos | Correo real de contacto |
+| `TU-CORREO@EJEMPLO.COM` | `index.html`, y el `README.md` del repo de perfil (`cv/print.html` ya usa el correo real) | Correo real de contacto |
 | Enlaces `Repositorio` de cada proyecto | `index.html`, sección Proyectos, y la tabla del `README.md` de perfil | URL de cada repositorio |
 | `Demo` de cada proyecto | `index.html`: `<span class="project-link is-disabled">` | Convertir en `<a href="…">` cuando exista demo. Farmacia Dulce Esperanza ya apunta a `https://farma-web-rho.vercel.app/` |
 | `Estado` de cada proyecto | `index.html`: bloque comentado `<span class="status">` | Descomentar y fijar el valor real |
