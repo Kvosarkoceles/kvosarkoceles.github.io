@@ -97,20 +97,19 @@
   </script>
 
   <!--
-    Google Analytics 4 (gtag.js)
-    TODO: sustituye AMBAS apariciones de G-XXXXXXXXXX por tu ID de medición
-    (GA4 > Administrar > Flujos de datos > tu flujo web).
+    Google Analytics 4 (gtag.js) — ID de medición: G-WRMWQKV9VZ
 
-    OJO: el contenedor GTM-5635GH7Z también carga una etiqueta GA4. Si activas
-    las dos vías, GA4 contará cada page_view DOS veces. Cuando definas el ID
-    real, elige UNA sola vía (o pon send_page_view:false aquí).
+    OJO: el contenedor GTM-5635GH7Z puede cargar también una etiqueta GA4 con
+    este mismo ID. Si es así, GA4 contará cada page_view DOS veces. Verifícalo
+    con la Vista previa de GTM y, si duplica, elige UNA sola vía (o añade
+    send_page_view: false aquí).
   -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRMWQKV9VZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-WRMWQKV9VZ');
   </script>
   <!-- End Google Analytics 4 -->
 
