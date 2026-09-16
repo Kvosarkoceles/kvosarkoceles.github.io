@@ -52,12 +52,42 @@
     return texto.length > maximo ? texto.slice(0, maximo) : texto;
   }
 
+  // Perfil del dispositivo. Todo esto lo expone el navegador sin pedir permiso
+  // al visitante, y nada de ello identifica a una persona por sí solo.
+  function perfilDispositivo() {
+    var ua = navigator.userAgent || '';
+    var movil;
+
+    // userAgentData es más fiable, pero solo existe en navegadores Chromium.
+    if (navigator.userAgentData && typeof navigator.userAgentData.mobile === 'boolean') {
+      movil = navigator.userAgentData.mobile;
+    } else {
+      movil = /Mobi|Android|iPhone|iPad|iPod/i.test(ua);
+    }
+
+    var zona = '';
+    try {
+      zona = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    } catch (e) {
+      zona = '';
+    }
+
+    return {
+      navegador: ua,
+      movil: movil,
+      resolucion: window.screen.width + 'x' + window.screen.height + '@' + (window.devicePixelRatio || 1),
+      zona_horaria: zona
+    };
+  }
+
   // Envía el evento a Supabase. Si falta la configuración o está desactivada,
   // no hace nada: el sitio sigue midiéndose solo con el dataLayer de GTM.
   function enviarASupabase(evento, categoria, etiqueta, extra) {
     var config = window.CONFIG_ANALITICA;
 
     if (!config || !config.activo || !config.url || !config.clave) return;
+
+    var perfil = perfilDispositivo();
 
     var registro = {
       evento: recortar(evento, 60),
@@ -67,6 +97,10 @@
       referrer: recortar(document.referrer, 300),
       idioma: recortar(navigator.language, 20),
       pantalla: recortar(window.innerWidth + 'x' + window.innerHeight, 20),
+      navegador: recortar(perfil.navegador, 300),
+      movil: perfil.movil,
+      resolucion: recortar(perfil.resolucion, 30),
+      zona_horaria: recortar(perfil.zona_horaria, 60),
       extra: extra || null
     };
 

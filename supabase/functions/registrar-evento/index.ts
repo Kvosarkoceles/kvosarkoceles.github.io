@@ -38,6 +38,9 @@ const LIMITES = {
   referrer: 300,
   idioma: 20,
   pantalla: 20,
+  navegador: 300,
+  resolucion: 30,
+  zona_horaria: 60,
 } as const;
 
 type Ubicacion = {
@@ -62,6 +65,12 @@ function responder(cuerpo: unknown, estado = 200): Response {
 function texto(valor: unknown, maximo: number): string | null {
   if (valor === null || valor === undefined || valor === '') return null;
   return String(valor).slice(0, maximo);
+}
+
+// Normaliza un valor a booleano. Devuelve null si no es un booleano real, para
+// no guardar "false" donde en realidad no hubo dato.
+function booleano(valor: unknown): boolean | null {
+  return typeof valor === 'boolean' ? valor : null;
 }
 
 // El navegador no puede conocer su propia IP pública: solo la ve el servidor.
@@ -150,6 +159,10 @@ Deno.serve(async (req: Request) => {
     referrer: texto(cuerpo.referrer, LIMITES.referrer),
     idioma: texto(cuerpo.idioma, LIMITES.idioma),
     pantalla: texto(cuerpo.pantalla, LIMITES.pantalla),
+    navegador: texto(cuerpo.navegador, LIMITES.navegador),
+    movil: booleano(cuerpo.movil),
+    resolucion: texto(cuerpo.resolucion, LIMITES.resolucion),
+    zona_horaria: texto(cuerpo.zona_horaria, LIMITES.zona_horaria),
     extra: cuerpo.extra ?? null,
     ...ubicacion,
   };
