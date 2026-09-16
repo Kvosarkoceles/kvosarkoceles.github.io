@@ -824,6 +824,33 @@ html[data-theme="dark"] .btn-primary { color: #04202a; }
 
 .project-block .tags { margin-top: 0; }
 
+/* Cuentas de acceso al demo */
+.demo-creds { display: grid; gap: 0.4rem; }
+
+.demo-creds li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.demo-creds .rol-demo {
+  flex: 0 0 6.8rem;
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.demo-creds code {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 7px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
 .project-foot {
   display: flex;
   flex-wrap: wrap;
