@@ -8,6 +8,11 @@
 
    Requiere que el contenedor de GTM esté cargado en la página, pero
    funciona igual sin él: solo acumula los pushes en window.dataLayer.
+
+   Además, cada evento se envía a Supabase (tabla 'eventos') para poder
+   consultar después las visitas y los clics como JSON. Las credenciales
+   viven en assets/js/config.js; si ese archivo falta o está desactivado,
+   el envío remoto se omite en silencio.
    ========================================================================== */
 
 (function () {
@@ -34,6 +39,54 @@
     }
 
     dataLayer.push(datos);
+    enviarASupabase(evento, categoria, etiqueta, extra);
+  }
+
+  /* ------------------------------------------------- Registro en Supabase */
+
+  // Recorta un valor para no chocar con las restricciones de longitud de la
+  // tabla: si un campo se pasa de largo, el INSERT falla y el evento se pierde.
+  function recortar(valor, maximo) {
+    if (valor === null || valor === undefined) return null;
+    var texto = String(valor);
+    return texto.length > maximo ? texto.slice(0, maximo) : texto;
+  }
+
+  // Envía el evento a Supabase. Si falta la configuración o está desactivada,
+  // no hace nada: el sitio sigue midiéndose solo con el dataLayer de GTM.
+  function enviarASupabase(evento, categoria, etiqueta, extra) {
+    var config = window.CONFIG_ANALITICA;
+
+    if (!config || !config.activo || !config.url || !config.clave) return;
+
+    var registro = {
+      evento: recortar(evento, 60),
+      categoria: recortar(categoria || 'general', 60),
+      etiqueta: recortar(etiqueta, 300),
+      ruta: recortar(window.location.pathname + window.location.search, 300),
+      referrer: recortar(document.referrer, 300),
+      idioma: recortar(navigator.language, 20),
+      pantalla: recortar(window.innerWidth + 'x' + window.innerHeight, 20),
+      extra: extra || null
+    };
+
+    try {
+      // fetch y no sendBeacon: Supabase exige la cabecera 'apikey' y
+      // sendBeacon no permite añadir cabeceras propias.
+      fetch(config.url, {
+        method: 'POST',
+        headers: {
+          'apikey': config.clave,
+          'Authorization': 'Bearer ' + config.clave,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify(registro),
+        keepalive: true
+      }).catch(function () {});
+    } catch (e) {
+      // Sin red o navegador sin fetch: el evento solo queda en el dataLayer.
+    }
   }
 
   // Texto visible del elemento, recortado y sin espacios sobrantes.
@@ -183,4 +236,10 @@
   if (document.body && document.body.hasAttribute('data-page-404')) {
     enviar('pagina_404', 'error', window.location.pathname + window.location.search);
   }
+
+  /* ---------------------------------------------------------------- Visita */
+
+  // Solo a Supabase, nunca al dataLayer: GTM y GA4 ya disparan su propio
+  // page_view, así que enviar otro aquí duplicaría la métrica en Analytics.
+  enviarASupabase('visita_pagina', 'navegacion', document.title, { titulo: document.title });
 })();
