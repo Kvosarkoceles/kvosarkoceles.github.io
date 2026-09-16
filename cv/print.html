@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <title>Miguel Ángel Mendoza Enríquez — CV</title>
+  <meta name="robots" content="noindex" />
+
+  <!--
+    Fuente del PDF del CV (documento de una sola columna, texto seleccionable
+    y compatible con sistemas ATS).
+
+    Generar el PDF:
+      bash scripts/generate-assets.sh
+    o directamente:
+      google-chrome --headless --disable-gpu --no-pdf-header-footer \
+        --print-to-pdf=cv/Miguel-Mendoza-CV.pdf cv/print.html
+
+    Recuerda reemplazar TU-PERFIL-LINKEDIN y TU-CORREO@EJEMPLO.COM.
+  -->
+
+  <style>
+    @page { size: A4; margin: 14mm 15mm; }
+
+    :root {
+      --tinta: #10161f;
+      --suave: #4a586b;
+      --linea: #d3dae4;
+      --acento: #0d7490;
+      --mono: ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace;
+      --sans: ui-sans-serif, system-ui, "DejaVu Sans", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    body {
+      font-family: var(--sans);
+      font-size: 9.7pt;
+      line-height: 1.45;
+      color: var(--tinta);
+      background: #fff;
+      padding: 0;
+    }
+
+    a { color: var(--tinta); text-decoration: none; }
+
+    /* ---------------------------------------------------------- Encabezado */
+
+    header.cv-head {
+      border-bottom: 2px solid var(--acento);
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 19pt;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .rol {
+      color: var(--acento);
+      font-size: 11pt;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .contacto {
+      font-family: var(--mono);
+      font-size: 8.4pt;
+      color: var(--suave);
+      margin-top: 7px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px 12px;
+    }
+
+    .contacto span::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      margin-right: 6px;
+      margin-bottom: 2px;
+      border-radius: 50%;
+      background: var(--acento);
+      vertical-align: middle;
+    }
+
+    /* ------------------------------------------------------------ Secciones */
+
+    section { margin-bottom: 12px; break-inside: avoid; }
+
+    h2 {
+      font-family: var(--mono);
+      font-size: 8.6pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--acento);
+      border-bottom: 1px solid var(--linea);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    h3 { font-size: 10.6pt; line-height: 1.25; }
+    h4 { font-size: 9.4pt; margin-top: 6px; }
+
+    p { color: var(--suave); }
+
+    strong { color: var(--tinta); }
+
+    ul { list-style: none; }
+
+    li {
+      position: relative;
+      padding-left: 11px;
+      color: var(--suave);
+      margin-top: 2px;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.58em;
+      width: 3.5px;
+      height: 3.5px;
+      border-radius: 50%;
+      background: var(--acento);
+    }
+
+    /* ---------------------------------------------------------- Experiencia */
+
+    .puesto {
+      break-inside: avoid;
+      margin-bottom: 10px;
+    }
+
+    .puesto:last-child { margin-bottom: 0; }
+
+    .puesto-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .puesto-head .fechas {
+      font-family: var(--mono);
+      font-size: 8.2pt;
+      color: var(--suave);
+      white-space: nowrap;
+    }
+
+    .empresa {
+      color: var(--acento);
+      font-size: 9.4pt;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .puesto p.resumen { margin-bottom: 4px; }
+
+    .grupos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 18px;
+      margin-top: 5px;
+    }
+
+    .grupos h4 {
+      font-family: var(--mono);
+      font-size: 7.8pt;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--tinta);
+      margin: 4px 0 2px;
+    }
+
+    .stack {
+      font-family: var(--mono);
+      font-size: 8pt;
+      color: var(--suave);
+      margin-top: 5px;
+    }
+
+    /* ------------------------------------------------------------- Proyectos */
+
+    .proyecto { break-inside: avoid; margin-bottom: 9px; }
+    .proyecto:last-child { margin-bottom: 0; }
+    .proyecto .tipo {
+      font-family: var(--mono);
+      font-size: 8pt;
+      color: var(--suave);
+      margin-bottom: 3px;
+    }
+
+    /* ----------------------------------------------------------- Habilidades */
+
+    .habilidades { display: grid; gap: 4px; }
+
+    .habilidades div {
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 10px;
+      align-items: baseline;
+      break-inside: avoid;
+    }
+
+    .habilidades dt {
+      font-family: var(--mono);
+      font-size: 7.9pt;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--acento);
+    }
+
+    .habilidades dd { color: var(--suave); }
+
+    .dos-columnas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .nota { font-size: 8.8pt; color: var(--suave); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <header class="cv-head">
+    <h1>Miguel Ángel Mendoza Enríquez</h1>
+    <p class="rol">Desarrollador Full Stack / Web Developer</p>
+    <p class="contacto">
+      <span>Ciudad de México, México</span>
+      <span>TU-CORREO@EJEMPLO.COM</span>
+      <span>github.com/Kvosarkoceles</span>
+      <span>linkedin.com/in/TU-PERFIL-LINKEDIN</span>
+    </p>
+  </header>
+
+  <section>
+    <h2>Perfil profesional</h2>
+    <p>
+      Desarrollador Full Stack / Web Developer con experiencia en el desarrollo y mantenimiento de
+      aplicaciones web, APIs e integración de sistemas. Mi trabajo combina backend, frontend,
+      integración de servicios, procesamiento de datos y evolución de plataformas existentes.
+      Experiencia en <strong>PHP, Laravel, CodeIgniter, Node.js, Python, Perl y APIs REST</strong>;
+      en frontend con <strong>JavaScript, React y Angular</strong>; en bases de datos
+      <strong>PostgreSQL, MySQL, MariaDB y MongoDB</strong>; y en servicios de <strong>AWS</strong>
+      como Lambda, SQS, API Gateway, EC2 y CloudWatch. Parte central de mi experiencia son los
+      sistemas de <strong>rastreo GPS, telemetría y geolocalización</strong>: integración de
+      dispositivos, procesamiento de datos, reportes y sistemas de alertas.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experiencia profesional</h2>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Web Full Stack</h3>
+          <p class="empresa">STI Solutions · Miguel Hidalgo, CDMX</p>
+        </div>
+        <p class="fechas">Ago 2022 — Dic 2023</p>
+      </div>
+      <p class="resumen">
+        Mantenimiento, optimización y evolución de una plataforma existente de rastreo GPS
+        utilizada por múltiples clientes: corrección de problemas, mejoras de funcionamiento y
+        desarrollo de nuevas funcionalidades e integraciones sobre el sistema en producción.
+      </p>
+      <div class="grupos">
+        <div>
+          <h4>Backend y servicios</h4>
+          <ul>
+            <li>Desarrollo de funcionalidades backend y frontend.</li>
+            <li>Servicios con AWS Lambda y procesos asíncronos con SQS.</li>
+            <li>Integración de APIs mediante API Gateway.</li>
+            <li>Desarrollo con Node.js y Python.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Datos, dispositivos y mapas</h4>
+          <ul>
+            <li>Integración de dispositivos GPS vía HTTP.</li>
+            <li>Procesamiento y análisis de información de telemetría.</li>
+            <li>Reportes y consultas de información GPS.</li>
+            <li>Integración de Google Maps y OpenStreetMap.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Alertas e infraestructura</h4>
+          <ul>
+            <li>Alertas mediante Twilio, WhatsApp y Telegram.</li>
+            <li>MySQL, EC2 y CloudWatch.</li>
+            <li>Control de versiones con Git.</li>
+            <li>Optimización y solución de problemas en sistemas existentes.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Frameworks y lenguajes</h4>
+          <ul>
+            <li>PHP con Laravel y CodeIgniter.</li>
+            <li>Node.js y Python para servicios e integraciones.</li>
+            <li>Consumo y publicación de APIs REST.</li>
+            <li>Trabajo sobre código existente y en producción.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="stack">
+        PHP · Laravel · CodeIgniter · Node.js · Python · AWS Lambda · SQS · API Gateway · EC2 ·
+        CloudWatch · MySQL · Twilio · WhatsApp · Telegram · Google Maps · OpenStreetMap · Git
+      </p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Web / Soporte TI</h3>
+          <p class="empresa">Grupo Digital Systems</p>
+        </div>
+        <p class="fechas">Dic 2020 — Ago 2022</p>
+      </div>
+      <p class="resumen">
+        Desarrollo y mantenimiento de aplicaciones web, combinado con soporte técnico y
+        administración de infraestructura.
+      </p>
+      <ul>
+        <li>Desarrollo y mantenimiento de aplicaciones web con PHP y CodeIgniter.</li>
+        <li>Modelado y consultas sobre MySQL.</li>
+        <li>Interfaces con Bootstrap, jQuery y AJAX.</li>
+        <li>Soporte técnico a usuarios y administración de servidores y redes.</li>
+        <li>Entornos con VMware, XAMPP, Linux y Windows.</li>
+      </ul>
+      <p class="stack">PHP · CodeIgniter · MySQL · Bootstrap · jQuery · AJAX · VMware · Linux · Windows</p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Web</h3>
+          <p class="empresa">CIMAC</p>
+        </div>
+        <p class="fechas">Jul 2016 — Feb 2020</p>
+      </div>
+      <p class="resumen">
+        Desarrollo de aplicaciones web y herramientas de consulta y análisis de datos en entorno
+        Linux.
+      </p>
+      <ul>
+        <li>Desarrollo de aplicaciones web con PHP, CodeIgniter y MySQL.</li>
+        <li>Procesamiento y análisis de información; herramientas para consulta y análisis de datos.</li>
+        <li>Participación en proyectos relacionados con información sobre violencia contra mujeres periodistas.</li>
+        <li>Desarrollo de herramientas para Violeta Radio.</li>
+        <li>Uso de Java y Bash; automatización de procesos de streaming y alertas.</li>
+      </ul>
+      <p class="stack">PHP · CodeIgniter · MySQL · Java · Bash · Linux</p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Administración / Cabo</h3>
+          <p class="empresa">México</p>
+        </div>
+        <p class="fechas">May 2004 — Jun 2020</p>
+      </div>
+      <p class="resumen">
+        Trayectoria previa en administración y coordinación operativa. Habilidades transferibles al
+        trabajo técnico: disciplina, organización, responsabilidad, coordinación, trabajo en equipo,
+        seguimiento de procedimientos y trabajo bajo presión.
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Proyectos</h2>
+
+    <article class="proyecto">
+      <h3>Farmacia Dulce Esperanza</h3>
+      <p class="tipo">Sistema Full Stack para administración de farmacia y consultorio</p>
+      <p>
+        Sistema para la administración de una farmacia y su consultorio: gestión de pacientes,
+        agenda de citas, inventario y autenticación, con API REST documentada y base de datos
+        relacional. Funcionalidades: pacientes, clientes, médicos, citas, consultas, servicios,
+        productos, recetas, inventario, autenticación y configuración de farmacia.
+      </p>
+      <p class="stack">React · Vite · Node.js · Express · PostgreSQL · Supabase · JavaScript · REST API · Swagger</p>
+    </article>
+
+    <article class="proyecto">
+      <h3>Sistema de monitoreo GPS</h3>
+      <p class="tipo">Monitoreo en tiempo real y georreferenciación</p>
+      <p>
+        Aplicación de monitoreo de unidades en tiempo real sobre protocolo MQTT, con
+        geolocalización y gestión de alarmas para el seguimiento de flotillas.
+      </p>
+      <p class="stack">Angular · Angular Material · MQTT · Geolocalización · GPS</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Habilidades técnicas</h2>
+    <div class="habilidades">
+      <div>
+        <dt>Backend</dt>
+        <dd>PHP, Laravel, CodeIgniter, Node.js, Python, Perl, APIs REST</dd>
+      </div>
+      <div>
+        <dt>Frontend</dt>
+        <dd>JavaScript, React, Angular, HTML5, CSS3, Bootstrap, jQuery, AJAX</dd>
+      </div>
+      <div>
+        <dt>Bases de datos</dt>
+        <dd>PostgreSQL, MySQL, MariaDB, MongoDB</dd>
+      </div>
+      <div>
+        <dt>Cloud / DevOps</dt>
+        <dd>AWS, Lambda, SQS, API Gateway, ECS, EKS, Step Functions, EventBridge, EC2, CloudWatch, Docker, Git</dd>
+      </div>
+      <div>
+        <dt>Integraciones</dt>
+        <dd>Apigee, Twilio, WhatsApp, Telegram, MQTT, Google Maps, OpenStreetMap</dd>
+      </div>
+      <div>
+        <dt>Datos y sistemas</dt>
+        <dd>GPS, Telemetría, Geolocalización, Linux, Windows, VMware</dd>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Educación</h2>
+    <div class="dos-columnas">
+      <div>
+        <h3>Universidad Nacional Autónoma de México (UNAM)</h3>
+        <p class="nota">Estudios en computación y tecnologías de la información · desde 2008</p>
+      </div>
+      <div>
+        <p>
+          Formación en el área de computación y tecnologías de la información, base sobre la que
+          desarrollo mi trabajo en desarrollo web, integración de sistemas y procesamiento de datos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

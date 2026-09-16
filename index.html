@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es-MX" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!--
+    ============================================================
+    PERSONALIZACIÓN PENDIENTE (busca estos valores y reemplázalos)
+    ------------------------------------------------------------
+    TU-PERFIL-LINKEDIN  -> tu URL real de LinkedIn
+    TU-CORREO@EJEMPLO.COM -> tu correo real de contacto
+    https://kvosarkoceles.github.io/  -> URL del sitio (aparece también en
+                                         robots.txt, sitemap.xml y 404.html)
+    El CV en PDF se genera en cv/Miguel-Mendoza-CV.pdf
+    ============================================================
+  -->
+
+  <title>Miguel Ángel Mendoza Enríquez — Desarrollador Full Stack | PHP, Laravel, React, AWS</title>
+  <meta name="description" content="Portafolio y CV de Miguel Ángel Mendoza Enríquez, Desarrollador Full Stack / Web Developer en Ciudad de México. Experiencia en PHP, Laravel, CodeIgniter, Node.js, Python, React, Angular, PostgreSQL, MySQL, MongoDB, AWS, APIs REST, GPS, telemetría y geolocalización." />
+  <meta name="author" content="Miguel Ángel Mendoza Enríquez" />
+  <meta name="keywords" content="Full Stack Developer, Web Developer, Software Developer, PHP, Laravel, CodeIgniter, JavaScript, React, Angular, Node.js, Python, PostgreSQL, MySQL, MongoDB, AWS, Docker, REST API, GPS, Telemetría, Geolocalización, MQTT, Ciudad de México" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0a0f1a" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f7f9fc" media="(prefers-color-scheme: light)" />
+  <link rel="canonical" href="https://kvosarkoceles.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Miguel Ángel Mendoza Enríquez" />
+  <meta property="og:title" content="Miguel Ángel Mendoza Enríquez — Desarrollador Full Stack" />
+  <meta property="og:description" content="Desarrollo y evolución de aplicaciones web, APIs e integración de sistemas. Experiencia en plataformas de rastreo GPS, telemetría y monitoreo en tiempo real." />
+  <meta property="og:url" content="https://kvosarkoceles.github.io/" />
+  <meta property="og:image" content="https://kvosarkoceles.github.io/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Miguel Ángel Mendoza Enríquez, Desarrollador Full Stack" />
+  <meta property="profile:first_name" content="Miguel Ángel" />
+  <meta property="profile:last_name" content="Mendoza Enríquez" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Miguel Ángel Mendoza Enríquez — Desarrollador Full Stack" />
+  <meta name="twitter:description" content="Aplicaciones web, APIs e integración de sistemas. GPS, telemetría y monitoreo en tiempo real." />
+  <meta name="twitter:image" content="https://kvosarkoceles.github.io/assets/img/og-image.png" />
+
+  <!-- Iconos -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Evita el parpadeo de tema (se ejecuta antes del primer pintado) -->
+  <script>
+    (function () {
+      try {
+        var guardado = localStorage.getItem('tema');
+        var sistema = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = guardado || sistema;
+      } catch (e) { /* sin acceso a localStorage */ }
+    })();
+  </script>
+
+  <!-- Datos estructurados para buscadores -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Miguel Ángel Mendoza Enríquez",
+    "jobTitle": "Desarrollador Full Stack",
+    "description": "Desarrollador Full Stack / Web Developer con experiencia en desarrollo y mantenimiento de aplicaciones web, APIs, integración de sistemas, GPS, telemetría, geolocalización, bases de datos y AWS.",
+    "url": "https://kvosarkoceles.github.io/",
+    "image": "https://kvosarkoceles.github.io/assets/img/og-image.png",
+    "email": "mailto:TU-CORREO@EJEMPLO.COM",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "addressCountry": "MX"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidad Nacional Autónoma de México (UNAM)"
+    },
+    "sameAs": [
+      "https://github.com/Kvosarkoceles",
+      "https://www.linkedin.com/in/TU-PERFIL-LINKEDIN"
+    ],
+    "knowsAbout": [
+      "Full Stack Development", "Web Development", "REST API", "PHP", "Laravel", "CodeIgniter",
+      "JavaScript", "React", "Angular", "Node.js", "Python", "PostgreSQL", "MySQL", "MongoDB",
+      "AWS", "Docker", "GPS", "Telemetría", "Geolocalización", "MQTT"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Inicio del portafolio de Miguel Ángel Mendoza Enríquez">
+        <span class="brand-mark" aria-hidden="true">MM</span>
+        <span class="brand-text">
+          <strong>Miguel Mendoza</strong>
+          <small>Desarrollador Full Stack</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#perfil">Perfil</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#educacion">Educación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar a tema claro">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-sun"></use></svg>
+        </button>
+        <a class="btn btn-primary btn-sm" href="cv/Miguel-Mendoza-CV.pdf" download>
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-download"></use></svg>
+          <span>CV PDF</span>
+        </a>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú de navegación">
+          <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            Desarrollador Full Stack · Web Developer
+          </p>
+
+          <h1 id="hero-title">
+            Miguel Ángel<br />
+            <span class="grad">Mendoza Enríquez</span>
+          </h1>
+
+          <p class="lead">
+            Desarrollo y evolución de <strong>aplicaciones web</strong>, <strong>APIs</strong> e
+            <strong>integración de sistemas</strong>. Trabajo en plataformas de rastreo GPS,
+            telemetría y monitoreo en tiempo real, con mantenimiento, optimización y nuevas
+            funcionalidades sobre software en producción.
+          </p>
+
+          <ul class="hero-meta">
+            <li>
+              <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-pin"></use></svg>
+              Ciudad de México, México
+            </li>
+            <li>
+              <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-briefcase"></use></svg>
+              Desarrollo web profesional desde 2016
+            </li>
+            <li>
+              <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-bolt"></use></svg>
+              Backend · Frontend · Cloud
+            </li>
+          </ul>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="cv/Miguel-Mendoza-CV.pdf" download>
+              <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-download"></use></svg>
+              Descargar CV (PDF)
+            </a>
+            <a class="btn btn-ghost" href="#proyectos">Ver proyectos</a>
+          </div>
+
+          <ul class="social" aria-label="Enlaces de contacto">
+            <li>
+              <a href="https://github.com/Kvosarkoceles" target="_blank" rel="noopener noreferrer">
+                GitHub
+                <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-external"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/TU-PERFIL-LINKEDIN" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+                <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-external"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:TU-CORREO@EJEMPLO.COM">
+                Correo
+                <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-mail"></use></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tech-strip" aria-label="Tecnologías principales">
+          <p class="tech-strip-label">Stack principal</p>
+          <ul>
+            <li>PHP</li><li>Laravel</li><li>CodeIgniter</li><li>JavaScript</li><li>React</li>
+            <li>Angular</li><li>Node.js</li><li>Python</li><li>PostgreSQL</li><li>MySQL</li>
+            <li>MongoDB</li><li>AWS</li><li>Docker</li><li>REST API</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PERFIL ===================== -->
+    <section class="section" id="perfil" aria-labelledby="perfil-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker"><span aria-hidden="true">01</span> Perfil profesional</p>
+          <h2 id="perfil-title">Perfil</h2>
+        </header>
+
+        <div class="grid-2">
+          <div class="prose reveal">
+            <p>
+              Soy <strong>Desarrollador Full Stack / Web Developer</strong> con experiencia en el
+              desarrollo y mantenimiento de aplicaciones web, APIs e integración de sistemas.
+              Mi trabajo combina backend, frontend, integración de servicios, procesamiento de
+              datos y la evolución de plataformas existentes.
+            </p>
+            <p>
+              He trabajado con <strong>PHP, Laravel, CodeIgniter, Node.js, Python, Perl</strong> y
+              <strong>APIs REST</strong> en el backend, y con
+              <strong>JavaScript, React y Angular</strong> en el frontend, sobre bases de datos
+              <strong>PostgreSQL, MySQL, MariaDB y MongoDB</strong>, y servicios de
+              <strong>AWS</strong> como Lambda, SQS, API Gateway, EC2 y CloudWatch.
+            </p>
+            <p>
+              Una parte importante de mi experiencia se centra en
+              <strong>sistemas de rastreo GPS, telemetría y geolocalización</strong>: integración de
+              dispositivos, procesamiento de datos, reportes y sistemas de alertas. Me desenvuelvo
+              con comodidad en el <strong>mantenimiento y la optimización de plataformas en
+              producción</strong>, identificando problemas y desarrollando nuevas funcionalidades e
+              integraciones sobre código existente.
+            </p>
+          </div>
+
+          <aside class="fact-card reveal" aria-label="Datos rápidos">
+            <h3 class="fact-title">Datos rápidos</h3>
+            <dl class="facts">
+              <div>
+                <dt>Rol</dt>
+                <dd>Desarrollador Full Stack / Web Developer</dd>
+              </div>
+              <div>
+                <dt>Ubicación</dt>
+                <dd>Ciudad de México, México</dd>
+              </div>
+              <div>
+                <dt>Especialidad</dt>
+                <dd>Aplicaciones web, APIs, GPS, telemetría y monitoreo</dd>
+              </div>
+              <div>
+                <dt>Bases de datos</dt>
+                <dd>PostgreSQL · MySQL · MariaDB · MongoDB</dd>
+              </div>
+              <div>
+                <dt>Cloud</dt>
+                <dd>AWS (Lambda, SQS, API Gateway, ECS, EKS, EC2, CloudWatch, Step Functions, EventBridge)</dd>
+              </div>
+              <div>
+                <dt>Educación</dt>
+                <dd>UNAM · Estudios en computación y tecnologías de la información</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCIA ===================== -->
+    <section class="section section-alt" id="experiencia" aria-labelledby="experiencia-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker"><span aria-hidden="true">02</span> Trayectoria</p>
+          <h2 id="experiencia-title">Experiencia profesional</h2>
+        </header>
+
+        <ol class="timeline">
+
+          <li class="timeline-item reveal">
+            <article class="job">
+              <header class="job-head">
+                <div>
+                  <h3>Desarrollador Web Full Stack</h3>
+                  <p class="job-company">STI Solutions <span class="sep" aria-hidden="true">·</span> Miguel Hidalgo, CDMX</p>
+                </div>
+                <p class="job-date">
+                  <time datetime="2022-08">Ago 2022</time> — <time datetime="2023-12">Dic 2023</time>
+                </p>
+              </header>
+
+              <p class="job-summary">
+                Mantenimiento, optimización y evolución de una <strong>plataforma existente de
+                rastreo GPS</strong> utilizada por múltiples clientes. El trabajo se centró en
+                corregir problemas, mejorar el funcionamiento y desarrollar nuevas funcionalidades
+                e integraciones sobre el sistema en producción.
+              </p>
+
+              <div class="job-groups">
+                <div>
+                  <h4>Backend y servicios</h4>
+                  <ul>
+                    <li>Desarrollo de funcionalidades backend y frontend sobre la plataforma existente.</li>
+                    <li>Servicios con <strong>AWS Lambda</strong> y procesos asíncronos con <strong>SQS</strong>.</li>
+                    <li>Integración de APIs mediante <strong>API Gateway</strong>.</li>
+                    <li>Desarrollo con <strong>Node.js</strong> y <strong>Python</strong>, además de <strong>PHP</strong> con Laravel y CodeIgniter.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Dispositivos, datos y mapas</h4>
+                  <ul>
+                    <li>Integración de dispositivos <strong>GPS vía HTTP</strong>.</li>
+                    <li>Procesamiento y análisis de información de <strong>telemetría</strong>.</li>
+                    <li>Desarrollo de reportes y consultas de información GPS.</li>
+                    <li>Integración de <strong>Google Maps</strong> y <strong>OpenStreetMap</strong>.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Alertas e infraestructura</h4>
+                  <ul>
+                    <li>Integración de alertas mediante <strong>Twilio, WhatsApp y Telegram</strong>.</li>
+                    <li>Trabajo con <strong>MySQL</strong>, <strong>EC2</strong> y <strong>CloudWatch</strong>.</li>
+                    <li>Control de versiones con <strong>Git</strong>.</li>
+                    <li>Optimización y solución de problemas en sistemas existentes.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ul class="tags" aria-label="Tecnologías utilizadas">
+                <li>PHP</li><li>Laravel</li><li>CodeIgniter</li><li>Node.js</li><li>Python</li>
+                <li>AWS Lambda</li><li>SQS</li><li>API Gateway</li><li>EC2</li><li>CloudWatch</li>
+                <li>MySQL</li><li>Twilio</li><li>Telegram</li><li>Google Maps</li><li>Git</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item reveal">
+            <article class="job">
+              <header class="job-head">
+                <div>
+                  <h3>Desarrollador Web / Soporte TI</h3>
+                  <p class="job-company">Grupo Digital Systems</p>
+                </div>
+                <p class="job-date">
+                  <time datetime="2020-12">Dic 2020</time> — <time datetime="2022-08">Ago 2022</time>
+                </p>
+              </header>
+
+              <p class="job-summary">
+                Desarrollo y mantenimiento de aplicaciones web, combinado con soporte técnico y
+                administración de infraestructura.
+              </p>
+
+              <ul class="bullets">
+                <li>Desarrollo y mantenimiento de aplicaciones web con <strong>PHP</strong> y <strong>CodeIgniter</strong>.</li>
+                <li>Modelado y consultas sobre <strong>MySQL</strong>.</li>
+                <li>Interfaces con <strong>Bootstrap, jQuery y AJAX</strong>.</li>
+                <li>Soporte técnico a usuarios y administración de servidores y redes.</li>
+                <li>Entornos con <strong>VMware, XAMPP, Linux y Windows</strong>.</li>
+              </ul>
+
+              <ul class="tags" aria-label="Tecnologías utilizadas">
+                <li>PHP</li><li>CodeIgniter</li><li>MySQL</li><li>Bootstrap</li><li>jQuery</li>
+                <li>AJAX</li><li>VMware</li><li>Linux</li><li>Windows</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item reveal">
+            <article class="job">
+              <header class="job-head">
+                <div>
+                  <h3>Desarrollador Web</h3>
+                  <p class="job-company">CIMAC</p>
+                </div>
+                <p class="job-date">
+                  <time datetime="2016-07">Jul 2016</time> — <time datetime="2020-02">Feb 2020</time>
+                </p>
+              </header>
+
+              <p class="job-summary">
+                Desarrollo de aplicaciones web y herramientas de consulta y análisis de datos en
+                entorno Linux.
+              </p>
+
+              <ul class="bullets">
+                <li>Desarrollo de aplicaciones web con <strong>PHP</strong>, <strong>CodeIgniter</strong> y <strong>MySQL</strong>.</li>
+                <li>Procesamiento y análisis de información; herramientas para consulta y análisis de datos.</li>
+                <li>Participación en proyectos relacionados con información sobre <strong>violencia contra mujeres periodistas</strong>.</li>
+                <li>Desarrollo de herramientas para <strong>Violeta Radio</strong>.</li>
+                <li>Uso de <strong>Java</strong> y <strong>Bash</strong>.</li>
+                <li>Automatización de procesos relacionados con <strong>streaming y alertas</strong>.</li>
+              </ul>
+
+              <ul class="tags" aria-label="Tecnologías utilizadas">
+                <li>PHP</li><li>CodeIgniter</li><li>MySQL</li><li>Java</li><li>Bash</li><li>Linux</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item timeline-item-compact reveal">
+            <article class="job">
+              <header class="job-head">
+                <div>
+                  <h3>Administración / Cabo</h3>
+                  <p class="job-company">México</p>
+                </div>
+                <p class="job-date">
+                  <time datetime="2004-05">May 2004</time> — <time datetime="2020-06">Jun 2020</time>
+                </p>
+              </header>
+              <p class="job-summary">
+                Trayectoria previa en administración y coordinación operativa. De esta etapa aporto
+                al trabajo técnico <strong>disciplina, organización, responsabilidad, coordinación,
+                trabajo en equipo, seguimiento de procedimientos y trabajo bajo presión</strong>.
+              </p>
+            </article>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker"><span aria-hidden="true">03</span> Trabajo técnico</p>
+          <h2 id="proyectos-title">Proyectos</h2>
+          <p class="section-sub">
+            Proyectos propios donde aplico desarrollo Full Stack, diseño de APIs, modelado de datos
+            y comunicación en tiempo real.
+          </p>
+        </header>
+
+        <div class="grid-2 cards">
+          <article class="project-card reveal">
+            <header>
+              <div class="project-icon" aria-hidden="true">
+                <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-db"></use></svg>
+              </div>
+              <div>
+                <h3>Farmacia Dulce Esperanza</h3>
+                <p class="project-type">Sistema Full Stack · Farmacia y consultorio</p>
+              </div>
+            </header>
+
+            <p>
+              Sistema para la administración de una farmacia y su consultorio: gestión de pacientes,
+              agenda de citas, inventario y autenticación, con una API REST documentada y base de
+              datos relacional.
+            </p>
+
+            <div class="project-block">
+              <h4>Funcionalidades</h4>
+              <ul class="tags tags-soft">
+                <li>Pacientes</li><li>Clientes</li><li>Médicos</li><li>Citas</li><li>Consultas</li>
+                <li>Servicios</li><li>Productos</li><li>Recetas</li><li>Inventario</li>
+                <li>Autenticación</li><li>Configuración de farmacia</li>
+              </ul>
+            </div>
+
+            <div class="project-block">
+              <h4>Tecnologías</h4>
+              <ul class="tags" aria-label="Tecnologías del proyecto">
+                <li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li>
+                <li>Supabase</li><li>JavaScript</li><li>REST API</li><li>Swagger</li>
+              </ul>
+            </div>
+
+            <!-- Estructura de metadatos del proyecto: cambia los href y, si quieres mostrar
+                 el estado, descomenta el bloque <span class="status"> y ajusta el texto. -->
+            <footer class="project-foot">
+              <!-- <span class="status">Estado: por definir</span> -->
+              <a class="project-link" href="https://github.com/Kvosarkoceles" target="_blank" rel="noopener noreferrer">
+                Repositorio
+                <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-external"></use></svg>
+              </a>
+              <span class="project-link is-disabled" aria-disabled="true" title="Demo no disponible por el momento">
+                Demo
+                <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-arrow"></use></svg>
+              </span>
+            </footer>
+          </article>
+
+          <article class="project-card reveal">
+            <header>
+              <div class="project-icon" aria-hidden="true">
+                <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-signal"></use></svg>
+              </div>
+              <div>
+                <h3>Sistema de monitoreo GPS</h3>
+                <p class="project-type">Monitoreo en tiempo real · Georreferenciación</p>
+              </div>
+            </header>
+
+            <p>
+              Aplicación de monitoreo de unidades en tiempo real sobre protocolo
+              <strong>MQTT</strong>, con geolocalización y gestión de alarmas para el seguimiento
+              de flotillas.
+            </p>
+
+            <div class="project-block">
+              <h4>Funcionalidades</h4>
+              <ul class="tags tags-soft">
+                <li>Monitoreo en tiempo real</li><li>Alarmas</li><li>Geolocalización</li><li>GPS</li>
+              </ul>
+            </div>
+
+            <div class="project-block">
+              <h4>Tecnologías</h4>
+              <ul class="tags" aria-label="Tecnologías del proyecto">
+                <li>Angular</li><li>Angular Material</li><li>MQTT</li><li>Geolocalización</li>
+              </ul>
+            </div>
+
+            <!-- Estructura de metadatos del proyecto: cambia los href y, si quieres mostrar
+                 el estado, descomenta el bloque <span class="status"> y ajusta el texto. -->
+            <footer class="project-foot">
+              <!-- <span class="status">Estado: por definir</span> -->
+              <a class="project-link" href="https://github.com/Kvosarkoceles" target="_blank" rel="noopener noreferrer">
+                Repositorio
+                <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-external"></use></svg>
+              </a>
+              <span class="project-link is-disabled" aria-disabled="true" title="Demo no disponible por el momento">
+                Demo
+                <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-arrow"></use></svg>
+              </span>
+            </footer>
+          </article>
+        </div>
+
+        <p class="repo-note reveal">
+          El código público de mis proyectos está en
+          <a href="https://github.com/Kvosarkoceles" target="_blank" rel="noopener noreferrer">github.com/Kvosarkoceles</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section class="section section-alt" id="habilidades" aria-labelledby="habilidades-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker"><span aria-hidden="true">04</span> Stack técnico</p>
+          <h2 id="habilidades-title">Habilidades</h2>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">
+              <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-server"></use></svg>
+            </div>
+            <h3>Backend</h3>
+            <ul class="tags"><li>PHP</li><li>Laravel</li><li>CodeIgniter</li><li>Node.js</li><li>Python</li><li>Perl</li><li>APIs REST</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">
+              <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-layout"></use></svg>
+            </div>
+            <h3>Frontend</h3>
+            <ul class="tags"><li>JavaScript</li><li>React</li><li>Angular</li><li>HTML5</li><li>CSS3</li><li>Bootstrap</li><li>jQuery</li><li>AJAX</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">
+              <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-db"></use></svg>
+            </div>
+            <h3>Bases de datos</h3>
+            <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>MariaDB</li><li>MongoDB</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">
+              <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-cloud"></use></svg>
+            </div>
+            <h3>Cloud y DevOps</h3>
+            <ul class="tags">
+              <li>AWS</li><li>Lambda</li><li>SQS</li><li>API Gateway</li><li>ECS</li><li>EKS</li>
+              <li>Step Functions</li><li>EventBridge</li><li>EC2</li><li>CloudWatch</li><li>Docker</li><li>Git</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">
+              <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-plug"></use></svg>
+            </div>
+            <h3>Integraciones y servicios</h3>
+            <ul class="tags"><li>Apigee</li><li>Twilio</li><li>WhatsApp</li><li>Telegram</li><li>MQTT</li><li>Google Maps</li><li>OpenStreetMap</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">
+              <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-signal"></use></svg>
+            </div>
+            <h3>Datos y sistemas</h3>
+            <ul class="tags"><li>GPS</li><li>Telemetría</li><li>Geolocalización</li><li>Linux</li><li>Windows</li><li>VMware</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCACIÓN + EXPERIENCIA PREVIA ===================== -->
+    <section class="section" id="educacion" aria-labelledby="educacion-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker"><span aria-hidden="true">05</span> Formación</p>
+          <h2 id="educacion-title">Educación</h2>
+        </header>
+
+        <article class="edu-card reveal">
+          <div class="skill-icon" aria-hidden="true">
+            <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-school"></use></svg>
+          </div>
+          <div>
+            <h3>Universidad Nacional Autónoma de México (UNAM)</h3>
+            <p class="edu-meta">Estudios en computación y tecnologías de la información · desde 2008</p>
+            <p class="edu-desc">
+              Formación en el área de computación y tecnologías de la información, base sobre la
+              que desarrollo mi trabajo en desarrollo web, integración de sistemas y procesamiento
+              de datos.
+            </p>
+          </div>
+        </article>
+
+        <div class="prev-exp reveal">
+          <h3>Experiencia previa</h3>
+          <p>
+            Antes de mi trayectoria en desarrollo, trabajé en <strong>administración y coordinación
+            operativa</strong> (2004–2020). De esa etapa conservo hábitos que aplico al trabajo
+            técnico: disciplina, organización, responsabilidad, coordinación de equipos, seguimiento
+            de procedimientos y capacidad de trabajo bajo presión.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section section-cta" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap">
+        <header class="section-head section-head-center reveal">
+          <p class="section-kicker"><span aria-hidden="true">06</span> Hablemos</p>
+          <h2 id="contacto-title">Contacto</h2>
+          <p class="section-sub">
+            ¿Quieres conocer más sobre mi experiencia o conversar sobre un proyecto?
+            Puedes escribirme por cualquiera de estos medios.
+          </p>
+        </header>
+
+        <div class="contact-grid reveal">
+          <a class="contact-card" href="mailto:TU-CORREO@EJEMPLO.COM">
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-mail"></use></svg>
+            <span class="contact-label">Correo</span>
+            <span class="contact-value">TU-CORREO@EJEMPLO.COM</span>
+          </a>
+
+          <a class="contact-card" href="https://github.com/Kvosarkoceles" target="_blank" rel="noopener noreferrer">
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-code"></use></svg>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/Kvosarkoceles</span>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/TU-PERFIL-LINKEDIN" target="_blank" rel="noopener noreferrer">
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-briefcase"></use></svg>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">/in/TU-PERFIL-LINKEDIN</span>
+          </a>
+
+          <div class="contact-card is-static">
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-pin"></use></svg>
+            <span class="contact-label">Ubicación</span>
+            <span class="contact-value">Ciudad de México, México</span>
+          </div>
+        </div>
+
+        <div class="cta-actions reveal">
+          <a class="btn btn-primary" href="cv/Miguel-Mendoza-CV.pdf" download>
+            <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-download"></use></svg>
+            Descargar CV (PDF)
+          </a>
+          <a class="btn btn-ghost" href="#top">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Miguel Ángel Mendoza Enríquez · Desarrollador Full Stack</p>
+      <p class="footer-links">
+        <a href="https://github.com/Kvosarkoceles" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.linkedin.com/in/TU-PERFIL-LINKEDIN" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span aria-hidden="true">·</span>
+        <a href="mailto:TU-CORREO@EJEMPLO.COM">Correo</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

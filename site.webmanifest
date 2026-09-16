@@ -1,0 +1,24 @@
+{
+  "name": "Miguel Ángel Mendoza Enríquez — Desarrollador Full Stack",
+  "short_name": "MM · CV",
+  "description": "Portafolio y CV profesional de Miguel Ángel Mendoza Enríquez, Desarrollador Full Stack / Web Developer.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0f1a",
+  "theme_color": "#0a0f1a",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

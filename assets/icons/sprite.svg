@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!--
+    Sprite de iconos del portafolio.
+    Diseño propio, trazo uniforme (stroke), sin dependencias externas.
+    Uso:  <svg class="ic" aria-hidden="true"><use href="assets/icons/sprite.svg#i-code"></use></svg>
+    El color se hereda con `currentColor`.
+  -->
+  <defs>
+    <g id="i-code"><path d="M9 6 4 12l5 6"/><path d="m15 6 5 6-5 6"/></g>
+    <g id="i-server"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></g>
+    <g id="i-layout"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M10 9v11"/></g>
+    <g id="i-db"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></g>
+    <g id="i-cloud"><path d="M7.5 19h9a4 4 0 0 0 .6-7.96A5.5 5.5 0 0 0 6.6 9.9 4.55 4.55 0 0 0 7.5 19z"/></g>
+    <g id="i-box"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9L12 3z"/><path d="m12 12 8-4.5M12 12v9M12 12 4 7.5"/></g>
+    <g id="i-signal"><path d="M4 19v-4M9 19v-7M14 19V9M19 19V5"/></g>
+    <g id="i-pin"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></g>
+    <g id="i-chat"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 21l1.9-5.3A8 8 0 1 1 21 12z"/></g>
+    <g id="i-plug"><path d="M9 3v6M15 3v6M7 9h10v3a5 5 0 0 1-10 0V9z"/><path d="M12 17v4"/></g>
+    <g id="i-terminal"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></g>
+    <g id="i-sliders"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="8" cy="17" r="2"/></g>
+    <g id="i-cpu"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></g>
+    <g id="i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.5 1.5M17.6 17.6l1.5 1.5M19.1 4.9l-1.5 1.5M6.4 17.6l-1.5 1.5"/></g>
+    <g id="i-moon"><path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a6.6 6.6 0 0 0 11.1 11.1z"/></g>
+    <g id="i-download"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></g>
+    <g id="i-mail"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.6 7 8.4 6 8.4-6"/></g>
+    <g id="i-external"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g>
+    <g id="i-briefcase"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12h18"/></g>
+    <g id="i-school"><path d="m12 4 9 4-9 4-9-4 9-4z"/><path d="M6.5 10.2V15c0 1.66 2.46 3 5.5 3s5.5-1.34 5.5-3v-4.8"/></g>
+    <g id="i-menu"><path d="M4 7h16M4 12h16M4 17h16"/></g>
+    <g id="i-close"><path d="m6 6 12 12M18 6 6 18"/></g>
+    <g id="i-check"><path d="m4 12 5 5L20 6"/></g>
+    <g id="i-arrow"><path d="M7 17 17 7M9 7h8v8"/></g>
+    <g id="i-bolt"><path d="M13 3 5 13h5l-1 8 8-10h-5l1-8z"/></g>
+  </defs>
+</svg>

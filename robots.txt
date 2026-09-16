@@ -1,0 +1,7 @@
+# Portafolio profesional de Miguel Ángel Mendoza Enríquez
+# https://kvosarkoceles.github.io/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://kvosarkoceles.github.io/sitemap.xml

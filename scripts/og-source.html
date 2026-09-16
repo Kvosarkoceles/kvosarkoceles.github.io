@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <title>og-image</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    /* Plantilla para capturar assets/img/og-image.png (1200x630)
+       Se renderiza con Chrome headless mediante scripts/generate-assets.sh */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+
+    body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 84px;
+      background: #0a0f1a;
+      color: #e8eefb;
+      font-family: ui-sans-serif, system-ui, "DejaVu Sans", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Retícula y resplandores, igual que el hero del sitio */
+    .fondo {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(42% 55% at 8% 0%, rgba(56, 189, 248, 0.22), transparent 70%),
+        radial-gradient(38% 50% at 96% 6%, rgba(45, 212, 191, 0.18), transparent 72%);
+    }
+
+    .reticula {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(148, 180, 220, 0.11) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 180, 220, 0.11) 1px, transparent 1px);
+      background-size: 64px 64px;
+      -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 80%);
+      mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 80%);
+    }
+
+    .barra {
+      position: absolute;
+      inset: 0 0 auto;
+      height: 7px;
+      background: linear-gradient(90deg, #2dd4bf, #38bdf8);
+    }
+
+    .contenido { position: relative; z-index: 1; }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 42px;
+    }
+
+    .monograma {
+      display: grid;
+      place-items: center;
+      width: 78px;
+      height: 78px;
+      border-radius: 20px;
+      background: linear-gradient(140deg, #2dd4bf, #38bdf8);
+      color: #04202a;
+      font-family: ui-monospace, "DejaVu Sans Mono", Menlo, monospace;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .marca small {
+      font-family: ui-monospace, "DejaVu Sans Mono", Menlo, monospace;
+      font-size: 19px;
+      line-height: 1.5;
+      color: #9aabc4;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-size: 74px;
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+    }
+
+    h1 span {
+      display: block;
+      background: linear-gradient(100deg, #2dd4bf, #38bdf8 92%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .rol {
+      margin-top: 26px;
+      font-size: 25px;
+      color: #9aabc4;
+    }
+
+    .rol strong { color: #e8eefb; font-weight: 600; }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 34px;
+    }
+
+    .stack span {
+      font-family: ui-monospace, "DejaVu Sans Mono", Menlo, monospace;
+      font-size: 17px;
+      padding: 7px 13px;
+      border: 1px solid rgba(148, 180, 220, 0.22);
+      border-radius: 8px;
+      color: #cbd8ea;
+      background: rgba(22, 33, 58, 0.7);
+    }
+
+    .pie {
+      position: absolute;
+      left: 84px;
+      bottom: 46px;
+      font-family: ui-monospace, "DejaVu Sans Mono", Menlo, monospace;
+      font-size: 17px;
+      color: #7f92ad;
+    }
+  </style>
+</head>
+<body>
+  <div class="fondo"></div>
+  <div class="reticula"></div>
+  <div class="barra"></div>
+
+  <div class="contenido">
+    <div class="marca">
+      <span class="monograma">MM</span>
+      <small>
+        Desarrollador Full Stack / Web Developer<br />
+        Ciudad de México, México
+      </small>
+    </div>
+
+    <h1>
+      Miguel Ángel
+      <span>Mendoza Enríquez</span>
+    </h1>
+
+    <p class="rol">
+      Aplicaciones web · APIs · Integración de sistemas ·
+      <strong>GPS y telemetría</strong>
+    </p>
+
+    <div class="stack">
+      <span>PHP</span><span>Laravel</span><span>Node.js</span><span>Python</span>
+      <span>React</span><span>Angular</span><span>AWS</span><span>PostgreSQL</span>
+    </div>
+  </div>
+
+  <p class="pie">github.com/Kvosarkoceles</p>
+</body>
+</html>
