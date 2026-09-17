@@ -20,7 +20,7 @@ build, sin dependencias) y publicado en **GitHub Pages**.
 7. [Deployment en GitHub Pages](#7-deployment-en-github-pages)
 8. [SEO](#8-seo)
 9. [Accesibilidad y rendimiento](#9-accesibilidad-y-rendimiento)
-10. [Personalización pendiente](#10-personalización-pendiente)
+10. [Datos de contacto y personalización](#10-datos-de-contacto-y-personalización)
 11. [Nota sobre las plantillas](#11-nota-sobre-las-plantillas)
 
 ---
@@ -291,12 +291,15 @@ si se usa un subdominio.
 
 ---
 
-## 10. Personalización pendiente
+## 10. Datos de contacto y personalización
+
+El correo y el LinkedIn reales **ya están configurados** en el sitio y el CV. Los marcadores que
+quedan por resolver son los de la tabla, todos ellos de contenido de proyectos.
 
 | Marcador | Dónde | Acción |
 | :--- | :--- | :--- |
-| `TU-PERFIL-LINKEDIN` | `index.html`, `cv/print.html`, y el `README.md` del repo de perfil | URL real de LinkedIn |
-| `TU-CORREO@EJEMPLO.COM` | `index.html`, y el `README.md` del repo de perfil (`cv/print.html` ya usa el correo real) | Correo real de contacto |
+| LinkedIn | `index.html`, `cv/print.html` y el `README.md` del repo de perfil | Ya configurado: `linkedin.com/in/miguel-angel-mendoza-enríquez-604574238` |
+| Correo | `index.html`, `cv/print.html` y el `README.md` del repo de perfil | Ya configurado: `sarkoceles@ciencias.unam.mx` |
 | Enlaces `Repositorio` de cada proyecto | `index.html`, sección Proyectos, y la tabla del `README.md` de perfil | URL de cada repositorio |
 | `Demo` de cada proyecto | `index.html`: `<span class="project-link is-disabled">` | Convertir en `<a href="…">` cuando exista demo. Farmacia Dulce Esperanza ya apunta a `https://farma-web-rho.vercel.app/` |
 | `Estado` de cada proyecto | `index.html`: bloque comentado `<span class="status">` | Descomentar y fijar el valor real |
