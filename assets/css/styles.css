@@ -786,6 +786,13 @@ html[data-theme="dark"] .btn-primary { color: #04202a; }
 
 .cards { align-items: stretch; }
 
+/* Rejilla de proyectos: 3 columnas en pantallas amplias y reparto automático
+   al reducir el ancho (la clase .grid-2 ya la colapsa a 1 columna en móvil). */
+.grid-2.cards-3 {
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
