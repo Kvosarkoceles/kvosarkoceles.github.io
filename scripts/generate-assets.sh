@@ -3,7 +3,8 @@
 # Genera los recursos binarios del portafolio:
 #   - assets/img/og-image.png        (1200x630, Open Graph / Twitter Card)
 #   - assets/img/apple-touch-icon.png (180x180)
-#   - cv/Miguel-Mendoza-CV.pdf        (A4, texto seleccionable, compatible con ATS)
+#   - cv/Miguel-Mendoza-CV.pdf        (2 páginas, texto seleccionable, compatible con ATS)
+#   - cv/Miguel-Mendoza-CV-extendido.pdf (4 páginas, versión extendida)
 #
 # Requisitos: ImageMagick 7 (`magick`) y Google Chrome / Chromium.
 # Uso:  bash scripts/generate-assets.sh
@@ -68,15 +69,20 @@ else
   echo "AVISO: ImageMagick no está instalado; se omite apple-touch-icon.png." >&2
 fi
 
-echo "→ Generando cv/Miguel-Mendoza-CV.pdf"
-chrome --no-pdf-header-footer --print-to-pdf="$CV/Miguel-Mendoza-CV.pdf" \
+echo "→ Generando cv/Miguel-Mendoza-CV-extendido.pdf (4 páginas)"
+chrome --no-pdf-header-footer --print-to-pdf="$CV/Miguel-Mendoza-CV-extendido.pdf" \
   "file://$CV/print.html"
+
+echo "→ Generando cv/Miguel-Mendoza-CV.pdf (2 páginas)"
+chrome --no-pdf-header-footer --print-to-pdf="$CV/Miguel-Mendoza-CV.pdf" \
+  "file://$CV/print-2p.html"
 
 if [ -f "$CV/Miguel-Mendoza-CV.pdf" ]; then
   echo "   ✓ $(du -h "$CV/Miguel-Mendoza-CV.pdf" | cut -f1) — $CV/Miguel-Mendoza-CV.pdf"
+  echo "   ✓ $(du -h "$CV/Miguel-Mendoza-CV-extendido.pdf" | cut -f1) — $CV/Miguel-Mendoza-CV-extendido.pdf"
 else
   echo "AVISO: Chrome no pudo generar el PDF automáticamente." >&2
-  echo "       Genera el PDF desde el navegador imprimiendo cv/print.html." >&2
+  echo "       Genera el PDF desde el navegador imprimiendo cv/print-2p.html." >&2
 fi
 
 echo "Listo."

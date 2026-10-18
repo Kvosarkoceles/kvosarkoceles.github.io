@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <title>Miguel Ángel Mendoza Enríquez — CV (2 páginas)</title>
+  <meta name="robots" content="noindex" />
+
+  <!--
+    Versión compacta de 2 páginas para postulaciones.
+    Fuente del PDF principal: cv/Miguel-Mendoza-CV.pdf
+    Generar:
+      google-chrome --headless --disable-gpu --no-pdf-header-footer \
+        --print-to-pdf=cv/Miguel-Mendoza-CV.pdf cv/print-2p.html
+    La versión extendida vive en cv/print.html → cv/Miguel-Mendoza-CV-extendido.pdf
+  -->
+
+  <style>
+    @page { size: A4; margin: 11mm 12mm 11mm; }
+
+    :root {
+      --tinta: #0d1520;
+      --suave: #46556a;
+      --linea: #dce3ed;
+      --acento: #0e7490;
+      --acento-2: #0f766e;
+      --panel: #f6f9fc;
+      --mono: ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace;
+      --sans: ui-sans-serif, system-ui, "DejaVu Sans", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    body {
+      font-family: var(--sans);
+      font-size: 9.3pt;
+      line-height: 1.42;
+      color: var(--tinta);
+      background: #fff;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ---------------------------------------------------------- Cabecera */
+    header.cv-head {
+      padding-bottom: 9px;
+      margin-bottom: 13px;
+      border-bottom: 2.5px solid var(--acento);
+    }
+
+    h1 {
+      font-size: 19pt;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+    }
+
+    .rol {
+      color: var(--acento);
+      font-size: 9.8pt;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .contacto {
+      font-family: var(--mono);
+      font-size: 7.2pt;
+      line-height: 1.5;
+      color: var(--suave);
+      margin-top: 5px;
+    }
+
+    .contacto span { display: block; }
+
+    /* ----------------------------------------------------------- Secciones */
+    section { margin-bottom: 10px; }
+
+    h2 {
+      font-family: var(--mono);
+      font-size: 7.6pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--acento);
+      border-bottom: 1px solid var(--linea);
+      padding-bottom: 2.5px;
+      margin-bottom: 7px;
+    }
+
+    .perfil p {
+      color: var(--suave);
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    /* ------------------------------------------------------------ Puestos */
+    .puesto {
+      margin-bottom: 8px;
+      padding-left: 9px;
+      border-left: 2px solid var(--linea);
+      break-inside: avoid;
+    }
+
+    .puesto:last-child { margin-bottom: 0; }
+
+    .puesto-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .puesto-head h3 {
+      font-size: 9.5pt;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .puesto-head .empresa {
+      color: var(--acento-2);
+      font-weight: 600;
+      font-size: 8.5pt;
+    }
+
+    .puesto-head .fechas {
+      font-family: var(--mono);
+      font-size: 7.4pt;
+      font-weight: 600;
+      color: var(--acento);
+      white-space: nowrap;
+    }
+
+    .puesto p.resumen {
+      color: var(--suave);
+      margin-top: 2px;
+      line-height: 1.42;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 3px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 10px;
+      color: var(--suave);
+      line-height: 1.38;
+      margin-bottom: 1.5px;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--acento);
+    }
+
+    .stack {
+      font-family: var(--mono);
+      font-size: 7.2pt;
+      color: var(--suave);
+      margin-top: 3px;
+      padding: 2.5px 6px;
+      background: var(--panel);
+      border-left: 2px solid var(--acento-2);
+      border-radius: 0 2px 2px 0;
+      break-inside: avoid;
+    }
+
+    /* ---------------------------------------------------------- Habilidades */
+    .habilidades {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 18px;
+    }
+
+    .habilidades > div {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 8px;
+      align-items: baseline;
+      padding: 2.5px 0;
+      border-bottom: 1px dotted var(--linea);
+      break-inside: avoid;
+    }
+
+    .habilidades > div:last-child { border-bottom: 0; }
+
+    .habilidades dt {
+      font-family: var(--mono);
+      font-size: 6.9pt;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--acento);
+    }
+
+    .habilidades dd { color: var(--suave); font-size: 7.8pt; }
+
+    /* ------------------------------------------------------------ Educación */
+    .educacion {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .educacion h3 { font-size: 9pt; }
+
+    .educacion .nota {
+      color: var(--suave);
+      font-size: 8pt;
+      margin-top: 1px;
+    }
+
+    .educacion p { color: var(--suave); font-size: 8pt; line-height: 1.4; }
+
+    section.skills-section,
+    section.projects-section { break-inside: avoid; }
+
+    .proyecto {
+      margin-bottom: 6px;
+      padding-left: 9px;
+      border-left: 2px solid var(--linea);
+      break-inside: avoid;
+    }
+
+    .proyecto:last-child { margin-bottom: 0; }
+
+    .proyecto-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .proyecto-head h3 {
+      font-size: 9.2pt;
+      font-weight: 700;
+    }
+
+    .proyecto-head .proyecto-meta {
+      font-family: var(--mono);
+      font-size: 7.2pt;
+      color: var(--acento);
+      white-space: nowrap;
+    }
+
+    .proyecto p {
+      color: var(--suave);
+      font-size: 8.2pt;
+      line-height: 1.4;
+      margin-top: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cv-head">
+    <div>
+      <h1>Miguel Ángel Mendoza Enríquez</h1>
+      <p class="rol">Desarrollador Full Stack / Backend</p>
+      <p class="contacto">
+        <span>Ciudad de México, México · +52 55 4253 8243 · sarkoceles@ciencias.unam.mx</span>
+        <span>linkedin.com/in/miguel-angel-mendoza-enríquez-604574238 · github.com/Kvosarkoceles · kvosarkoceles.github.io</span>
+      </p>
+    </div>
+  </header>
+
+  <section class="perfil">
+    <h2>Perfil profesional</h2>
+    <p>
+      Desarrollador Full Stack con casi una década de experiencia construyendo y manteniendo
+      aplicaciones web, APIs e integraciones en producción. Trabajo de punta a punta: backend,
+      frontend, bases de datos y evolución de plataformas existentes. Mi especialidad son los
+      sistemas de rastreo GPS, telemetría y geolocalización, y las plataformas multi-tenant.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experiencia profesional</h2>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Full Stack</h3>
+          <p class="empresa">ClinovaMex · Proyecto propio</p>
+        </div>
+        <p class="fechas">Jun 2026 — Actualidad</p>
+      </div>
+      <p class="resumen">
+        Plataforma multi-tenant para la operación de farmacias y consultorios: inventario, ventas,
+        pacientes, citas, recetas, pólizas y reportes.
+      </p>
+      <ul>
+        <li>API REST con Node.js y Express sobre PostgreSQL; autenticación JWT, 5 roles, 42 permisos y auditoría.</li>
+        <li>Frontend React/Vite/Tailwind y panel React/TypeScript; tickets de 80 mm, recetas y escáner de códigos.</li>
+        <li>60 migraciones versionadas, entornos local/test/producción con Docker Compose y automatización con Python y Bash.</li>
+        <li>Agentes de IA con modelos locales en Ollama (Qwen2.5, Ornith, Qwen2.5-VL) y DeepSeek.</li>
+      </ul>
+      <p class="stack">React · TypeScript · Node.js · Express · Python · PostgreSQL · Supabase · Docker · Bash · Ollama · DeepSeek · JWT</p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Full Stack / Desarrollador de Software</h3>
+          <p class="empresa">Sitrack México</p>
+        </div>
+        <p class="fechas">Jul 2024 — Jul 2026</p>
+      </div>
+      <p class="resumen">
+        Plataformas web de monitoreo GPS y telemetría para logística y control de flotillas.
+      </p>
+      <ul>
+        <li>Backend PHP/Laravel, APIs REST e integración con servicios de terceros; frontend Angular y Next.js.</li>
+        <li>Procesamiento de dispositivos GPS, eventos de rastreo y reportes para clientes de logística.</li>
+        <li>Participación en RoadSentinel, aplicación de prevención de robo de vehículos de carga.</li>
+      </ul>
+      <p class="stack">PHP · Laravel · Angular · Next.js · REST · OpenStreetMap · Docker · Linux · GitLab · GPS</p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Full Stack</h3>
+          <p class="empresa">Freelance · T7Group / CÍMAC</p>
+        </div>
+        <p class="fechas">Dic 2023 — Jul 2024</p>
+      </div>
+      <ul>
+        <li>Sitio web corporativo con Next.js y mantenimiento de aplicaciones CodeIgniter.</li>
+        <li>Pruebas de calidad, soporte y mantenimiento de servidores para aplicaciones en operación.</li>
+      </ul>
+      <p class="stack">Next.js · PHP · CodeIgniter · JavaScript · APIs REST</p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Web Full Stack</h3>
+          <p class="empresa">STI Solutions · Miguel Hidalgo, CDMX</p>
+        </div>
+        <p class="fechas">Ago 2022 — Dic 2023</p>
+      </div>
+      <p class="resumen">
+        Evolución de una plataforma de rastreo GPS en producción utilizada por múltiples clientes.
+      </p>
+      <ul>
+        <li>Servicios con AWS Lambda, SQS y API Gateway; desarrollo con Node.js, Python, PHP y Laravel.</li>
+        <li>Integración de dispositivos GPS vía HTTP, telemetría, reportes y Google Maps/OpenStreetMap.</li>
+        <li>Alertas con Twilio, WhatsApp y Telegram; MySQL, EC2 y CloudWatch.</li>
+      </ul>
+      <p class="stack">PHP · Laravel · CodeIgniter · Node.js · Python · AWS · MySQL · Twilio · Google Maps</p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Web / Soporte TI</h3>
+          <p class="empresa">Grupo Digital Systems</p>
+        </div>
+        <p class="fechas">Dic 2020 — Ago 2022</p>
+      </div>
+      <ul>
+        <li>Aplicaciones web con PHP, CodeIgniter y MySQL; interfaces con Bootstrap, jQuery y AJAX.</li>
+        <li>Soporte técnico, administración de servidores y redes; VMware, Linux y Windows.</li>
+      </ul>
+      <p class="stack">PHP · CodeIgniter · MySQL · Bootstrap · jQuery · AJAX · VMware · Linux · Windows</p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Desarrollador Web</h3>
+          <p class="empresa">CIMAC</p>
+        </div>
+        <p class="fechas">Jul 2016 — Feb 2020</p>
+      </div>
+      <ul>
+        <li>Aplicaciones web con PHP, CodeIgniter y MySQL; herramientas de consulta y análisis de datos.</li>
+        <li>Herramientas para Violeta Radio; Java y Bash; automatización de streaming y alertas.</li>
+      </ul>
+      <p class="stack">PHP · CodeIgniter · MySQL · Java · Bash · Linux</p>
+    </article>
+
+    <article class="puesto">
+      <div class="puesto-head">
+        <div>
+          <h3>Administración / Cabo</h3>
+          <p class="empresa">Experiencia previa</p>
+        </div>
+      </div>
+      <p class="resumen">
+        Administración y coordinación operativa. Habilidades transferibles: disciplina,
+        organización, seguimiento de procedimientos y trabajo bajo presión.
+      </p>
+    </article>
+  </section>
+
+  <section class="projects-section">
+    <h2>Proyectos destacados</h2>
+
+    <article class="proyecto">
+      <div class="proyecto-head">
+        <h3>ClinovaMex</h3>
+        <span class="proyecto-meta">Producto propio · 2026</span>
+      </div>
+      <p>
+        Plataforma multi-tenant para farmacias y consultorios: 3 aplicaciones, 60 migraciones,
+        5 roles y 42 permisos. Caso de estudio en kvosarkoceles.github.io/proyectos/clinovamex.html
+      </p>
+    </article>
+
+    <article class="proyecto">
+      <div class="proyecto-head">
+        <h3>Sistema de monitoreo GPS</h3>
+        <span class="proyecto-meta">Monitoreo en tiempo real</span>
+      </div>
+      <p>
+        Monitoreo de unidades sobre MQTT con geolocalización, alarmas y seguimiento de flotillas.
+        Angular · Angular Material · MQTT · GPS
+      </p>
+    </article>
+
+    <article class="proyecto">
+      <div class="proyecto-head">
+        <h3>RoadSentinel</h3>
+        <span class="proyecto-meta">Prevención de robo</span>
+      </div>
+      <p>
+        Monitoreo y prevención de robo de vehículos de carga: geolocalización, mapas e integración
+        de servicios para el seguimiento de flotillas. Angular · Next.js · PHP · Laravel · OpenStreetMap
+      </p>
+    </article>
+  </section>
+
+  <section class="skills-section">
+    <h2>Habilidades técnicas</h2>
+    <div class="habilidades">
+      <div>
+        <dt>Backend</dt>
+        <dd>PHP, Laravel, CodeIgniter, Node.js, Express, Python, Perl, APIs REST, JWT</dd>
+      </div>
+      <div>
+        <dt>Frontend</dt>
+        <dd>JavaScript, TypeScript, React, Angular, Next.js, Vue.js, Vite, Tailwind CSS</dd>
+      </div>
+      <div>
+        <dt>Datos y cloud</dt>
+        <dd>PostgreSQL, MySQL, MariaDB, MongoDB, AWS (Lambda, SQS, API Gateway, EC2, CloudWatch), Docker, Supabase, Bash, Linux, Git</dd>
+      </div>
+      <div>
+        <dt>Integraciones e IA</dt>
+        <dd>GPS, Telemetría, Geolocalización, MQTT, OpenStreetMap, Google Maps, Twilio, WhatsApp, Telegram, Ollama, Qwen2.5, DeepSeek</dd>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Educación</h2>
+    <div class="educacion">
+      <div>
+        <h3>Universidad Nacional Autónoma de México (UNAM)</h3>
+        <p class="nota">Estudios de licenciatura en computación y tecnologías de la información · carrera sin concluir</p>
+      </div>
+      <div>
+        <p>
+          Formación en computación y tecnologías de la información, complementada con experiencia
+          profesional en desarrollo web, integración de sistemas y procesamiento de datos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -9,11 +9,14 @@
     Fuente del PDF del CV (documento de una sola columna, texto seleccionable
     y compatible con sistemas ATS).
 
-    Generar el PDF:
+    Versión extendida (4 páginas). El CV principal de 2 páginas se genera
+    desde cv/print-2p.html.
+
+    Generar ambos PDF:
       bash scripts/generate-assets.sh
     o directamente:
       google-chrome --headless --disable-gpu --no-pdf-header-footer \
-        --print-to-pdf=cv/Miguel-Mendoza-CV.pdf cv/print.html
+        --print-to-pdf=cv/Miguel-Mendoza-CV-extendido.pdf cv/print.html
 
     Los datos de contacto (correo y LinkedIn) deben coincidir con
     los de index.html. Si los cambias aquí, regenera el PDF.
@@ -366,17 +369,19 @@
   <section class="perfil">
     <h2>Perfil profesional</h2>
     <p>
-      Desarrollador Full Stack / Web Developer con más de 8 años de experiencia en el desarrollo y
-      mantenimiento de aplicaciones web, APIs e integración de sistemas. Mi trabajo combina
-      backend, frontend, integración de servicios, procesamiento de datos y evolución de
-      plataformas existentes. Experiencia en <strong>PHP, Laravel, CodeIgniter, Node.js, Python,
-      Perl y APIs REST</strong>; en frontend con <strong>JavaScript, React, Angular, Vue.js y
-      Next.js</strong>; en bases de datos <strong>PostgreSQL, MySQL, MariaDB y MongoDB</strong>; y
-      en <strong>AWS</strong> (Lambda, SQS, API Gateway, EC2, CloudWatch) junto con
-      <strong>Docker, Linux, Git y GitLab</strong>. Parte central de mi experiencia son los
-      sistemas de <strong>rastreo GPS, telemetría y geolocalización</strong>: integración de
-      dispositivos, procesamiento de datos de unidades y eventos de rastreo, reportes y sistemas
-      de alertas aplicados a <strong>logística, monitoreo y seguimiento vehicular</strong>.
+      Desarrollador Full Stack con casi una década de experiencia construyendo y manteniendo
+      aplicaciones web, APIs e integraciones en producción. Trabajo de punta a punta: backend,
+      frontend, bases de datos, despliegue y evolución de plataformas existentes.
+    </p>
+    <p>
+      Mi stack principal es PHP/Laravel, Node.js, Python, React, Angular y PostgreSQL, con AWS,
+      Docker y Linux. Parte central de mi experiencia son los sistemas de rastreo GPS, telemetría y
+      geolocalización: dispositivos, eventos, reportes y alertas para logística y monitoreo
+      vehicular.
+    </p>
+    <p>
+      Actualmente desarrollo ClinovaMex, una plataforma multi-tenant para farmacias y consultorios,
+      e incorporo agentes de IA con modelos locales (Ollama) y DeepSeek en mi flujo de trabajo.
     </p>
   </section>
 
@@ -438,12 +443,12 @@
             <li>Ollama para servir modelos locales: Qwen2.5 14B (código y datos), Qwen2.5-VL 7B (visión) y Ornith 9B (general).</li>
             <li>DeepSeek para planificación, revisión y resolución de bloqueos.</li>
             <li>Playwright MCP para validar interfaces y flujos en el navegador.</li>
-            <li>Automatización con bot de Telegram, systemd y scripts en Bash.</li>
+            <li>Automatización con bot de Telegram, Python, systemd y scripts en Bash.</li>
           </ul>
         </div>
       </div>
       <p class="stack">
-        React · TypeScript · Node.js · Express · PostgreSQL · Supabase · Docker · Ollama · DeepSeek · JWT
+        React · TypeScript · Node.js · Express · Python · PostgreSQL · Supabase · Docker · Ollama · DeepSeek · Bash · JWT
       </p>
     </article>
 
@@ -633,9 +638,8 @@
       <div class="puesto-head">
         <div>
           <h3>Administración / Cabo</h3>
-          <p class="empresa">México</p>
+          <p class="empresa">Experiencia previa</p>
         </div>
-        <p class="fechas">May 2004 — Jun 2020</p>
       </div>
       <p class="resumen">
         Trayectoria previa en administración y coordinación operativa. Habilidades transferibles al
@@ -652,14 +656,14 @@
       <h3>ClinovaMex</h3>
       <p class="tipo">Plataforma multi-tenant para farmacias y consultorios</p>
       <p>
-        Plataforma para la gestión de farmacias y consultorios: inventario, ventas, pacientes,
-        citas, recetas, pólizas y administración de sucursales, con API REST documentada, panel de
-        plataforma y permisos por rol. Funcionalidades: pacientes, clientes, médicos, citas,
-        consultas, servicios, productos, recetas, inventario, ventas, pólizas, reportes, roles y
-        permisos, sucursales y auditoría.
+        Plataforma multi-tenant que centraliza la operación de farmacias y consultorios: inventario,
+        ventas, pacientes, citas, recetas y pólizas en una sola API y un panel de administración.
+        Permisos por rol, auditoría y reportes para operar varias sucursales. Funcionalidades:
+        pacientes, clientes, médicos, citas, consultas, servicios, productos, recetas, inventario,
+        ventas, pólizas, reportes, roles y permisos, sucursales y auditoría. Alcance: 3 aplicaciones,
+        60 migraciones, 5 roles y 42 permisos.
       </p>
-      <p class="stack">React · Vite · Tailwind CSS · TypeScript · Node.js · Express · PostgreSQL · Supabase · Docker · REST API · Swagger · JWT</p>
-      <p class="enlace">Demo: <span>farma-web-rho.vercel.app</span></p>
+      <p class="stack">React · Vite · Tailwind CSS · TypeScript · Node.js · Express · Python · PostgreSQL · Supabase · Docker · Bash · REST API · Swagger · JWT</p>
     </article>
 
     <article class="proyecto">
@@ -701,7 +705,7 @@
       </div>
       <div>
         <dt>Cloud / DevOps</dt>
-        <dd>AWS, Lambda, SQS, API Gateway, ECS, EKS, Step Functions, EventBridge, EC2, CloudWatch, Docker, Supabase, Linux, Git, GitLab</dd>
+        <dd>AWS, Lambda, SQS, API Gateway, ECS, EKS, Step Functions, EventBridge, EC2, CloudWatch, Docker, Supabase, Bash, Linux, Git, GitLab</dd>
       </div>
       <div>
         <dt>Integraciones</dt>
@@ -723,7 +727,7 @@
     <div class="dos-columnas">
       <div>
         <h3>Universidad Nacional Autónoma de México (UNAM)</h3>
-        <p class="nota">Estudios en computación y tecnologías de la información · desde 2008</p>
+        <p class="nota">Estudios de licenciatura en computación y tecnologías de la información · UNAM (carrera sin concluir)</p>
       </div>
       <div>
         <p>

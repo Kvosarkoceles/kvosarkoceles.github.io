@@ -127,8 +127,10 @@ kvosarkoceles.github.io/
 │       ├── apple-touch-icon.png
 │       └── og-image.png             # 1200x630 Open Graph
 ├── cv/
-│   ├── Miguel-Mendoza-CV.pdf        # Generado (no editar a mano)
-│   └── print.html                   # Fuente del PDF, optimizada para impresión
+│   ├── Miguel-Mendoza-CV.pdf        # CV de 2 páginas, generado (no editar a mano)
+│   ├── Miguel-Mendoza-CV-extendido.pdf # Versión de 4 páginas, generada
+│   ├── print-2p.html                # Fuente del CV de 2 páginas
+│   └── print.html                   # Fuente del CV extendido
 ├── scripts/
 │   ├── generate-assets.sh           # Regenera PDF, OG image y apple-touch-icon
 │   └── og-source.html               # Plantilla de la imagen Open Graph
@@ -197,15 +199,16 @@ El script produce:
 
 | Archivo | Origen | Herramienta |
 | :--- | :--- | :--- |
-| `cv/Miguel-Mendoza-CV.pdf` | `cv/print.html` | Chrome / Chromium headless |
+| `cv/Miguel-Mendoza-CV.pdf` | `cv/print-2p.html` | Chrome / Chromium headless |
+| `cv/Miguel-Mendoza-CV-extendido.pdf` | `cv/print.html` | Chrome / Chromium headless |
 | `assets/img/og-image.png` | `scripts/og-source.html` | Chrome / Chromium headless |
 | `assets/img/apple-touch-icon.png` | `scripts/generate-assets.sh` | ImageMagick 7 (`magick`) |
 Requisitos: `google-chrome` (o `chromium`) para el PDF y la imagen Open Graph, e ImageMagick 7
 (`magick`) para el icono. Si Chrome no está disponible, el PDF puede generarse desde el navegador
-imprimiendo `cv/print.html` como PDF.
+imprimiendo `cv/print-2p.html` (CV principal) o `cv/print.html` (extendido) como PDF.
 
-**Flujo de actualización del CV:** editar el contenido en `index.html` (sitio) y en
-`cv/print.html` (PDF), luego ejecutar el script. El README de perfil es otro repositorio
+**Flujo de actualización del CV:** editar el contenido en `index.html` (sitio), en
+`cv/print-2p.html` (CV principal) y en `cv/print.html` (extendido), luego ejecutar el script. El README de perfil es otro repositorio
 (`Kvosarkoceles/Kvosarkoceles`) y se edita aparte.
 
 ---
@@ -300,10 +303,10 @@ quedan por resolver son los de la tabla, todos ellos de contenido de proyectos.
 
 | Marcador | Dónde | Acción |
 | :--- | :--- | :--- |
-| LinkedIn | `index.html`, `cv/print.html` y el `README.md` del repo de perfil | Ya configurado: `linkedin.com/in/miguel-angel-mendoza-enríquez-604574238` |
-| Correo | `index.html`, `cv/print.html` y el `README.md` del repo de perfil | Ya configurado: `sarkoceles@ciencias.unam.mx` |
+| LinkedIn | `index.html`, `cv/print.html`, `cv/print-2p.html` y el `README.md` del repo de perfil | Ya configurado: `linkedin.com/in/miguel-angel-mendoza-enríquez-604574238` |
+| Correo | `index.html`, `cv/print.html`, `cv/print-2p.html` y el `README.md` del repo de perfil | Ya configurado: `sarkoceles@ciencias.unam.mx` |
 | Enlaces `Repositorio` de cada proyecto | `index.html`, sección Proyectos, y la tabla del `README.md` de perfil | URL de cada repositorio |
-| `Demo` de cada proyecto | `index.html`: `<span class="project-link is-disabled">` | Convertir en `<a href="…">` cuando exista demo. ClinovaMex ya apunta a `https://farma-web-rho.vercel.app/` |
+| `Demo` de cada proyecto | `index.html`: `<span class="project-link is-disabled">` | Convertir en `<a href="…">` cuando exista demo. ClinovaMex no expone demo: enlaza al caso de estudio (`proyectos/clinovamex.html`). |
 | `Estado` de cada proyecto | `index.html`: bloque comentado `<span class="status">` | Descomentar y fijar el valor real |
 | `apple-touch-icon.png` | `assets/img/` | Se regenera con `scripts/generate-assets.sh` |
 | URLs `raw.githubusercontent.com/Kvosarkoceles/Kvosarkoceles/main/assets/…` | `README.md` del repo de perfil (banner, divisor y pie) | Se usan URLs absolutas porque GitHub no siempre resuelve rutas relativas al mostrar el README en el perfil. Si cambias de rama o de usuario, actualiza esas referencias |
