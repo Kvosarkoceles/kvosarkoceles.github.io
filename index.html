@@ -336,6 +336,72 @@
 
         <ol class="timeline">
 
+
+
+          <li class="timeline-item reveal">
+            <article class="job">
+              <header class="job-head">
+                <div>
+                  <h3>Desarrollador Full Stack</h3>
+                  <p class="job-company">ClinovaMex <span class="sep" aria-hidden="true">·</span> Proyecto propio</p>
+                </div>
+                <p class="job-date">
+                  <time datetime="2026-06">Jun 2026</time> — <span>Actualidad</span>
+                </p>
+              </header>
+
+              <p class="job-summary">
+                Diseño y desarrollo de <strong>ClinovaMex</strong>, plataforma multi-tenant para la
+                gestión de farmacias y consultorios: inventario, ventas, pacientes, citas, recetas,
+                pólizas, reportes y administración de sucursales. Producto completo, desde el
+                modelado de datos y la API hasta la interfaz, el panel de plataforma y el despliegue.
+              </p>
+
+              <div class="job-groups">
+                <div>
+                  <h4>Producto y arquitectura</h4>
+                  <ul>
+                    <li>Plataforma <strong>multi-tenant</strong> con aislamiento de datos por farmacia y sucursal.</li>
+                    <li>Modelo de <strong>5 roles y 42 permisos</strong> administrables desde el panel, sin desplegar.</li>
+                    <li>Base de datos PostgreSQL con <strong>60 migraciones versionadas</strong> y trazabilidad de cambios.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Backend y APIs</h4>
+                  <ul>
+                    <li>API REST con <strong>Node.js y Express</strong> sobre <strong>PostgreSQL</strong>, autenticación con JWT.</li>
+                    <li>Reglas de negocio para ventas, inventario, cancelaciones con devolución de stock, recetas y pólizas.</li>
+                    <li>Documentación de la API con <strong>Swagger</strong> y auditoría de acciones administrativas.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Frontend</h4>
+                  <ul>
+                    <li>Aplicación web con <strong>React, Vite y Tailwind CSS</strong> para el personal de farmacia.</li>
+                    <li>Panel de plataforma con <strong>React y TypeScript</strong> para alta de clientes, roles y permisos.</li>
+                    <li>Impresión de tickets de 80 mm y recetas, temas por cliente y escáner de códigos de barras.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Infraestructura, IA y automatización</h4>
+                  <ul>
+                    <li>Entornos <strong>local, test y producción</strong> con <strong>Docker Compose</strong> y scripts de automatización en Bash.</li>
+                    <li>PostgreSQL gestionado con <strong>Supabase</strong> y almacenamiento de imágenes.</li>
+                    <li>Agentes de IA con <strong>modelos locales en Ollama</strong>: <strong>Qwen2.5 14B</strong> para código y datos, <strong>Ornith 9B</strong> general y <strong>Qwen2.5-VL 7B</strong> para visión.</li>
+                    <li>Coordinación con <strong>DeepSeek</strong> como supervisor y un bot de <strong>Telegram</strong> para ejecutar y dar seguimiento a tareas.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ul class="tags" aria-label="Tecnologías utilizadas">
+                <li>React</li><li>Vite</li><li>Tailwind CSS</li><li>TypeScript</li><li>Node.js</li>
+                <li>Express</li><li>PostgreSQL</li><li>Supabase</li><li>Docker</li>
+                <li>Ollama</li><li>Qwen2.5</li><li>DeepSeek</li>
+                <li>REST API</li><li>Swagger</li><li>JWT</li><li>Bash</li>
+              </ul>
+            </article>
+          </li>
+
           <li class="timeline-item reveal">
             <article class="job">
               <header class="job-head">
@@ -399,6 +465,8 @@
               </ul>
             </article>
           </li>
+
+
 
           <li class="timeline-item reveal">
             <article class="job">
@@ -763,7 +831,7 @@
               <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-server"></use></svg>
             </div>
             <h3>Backend</h3>
-            <ul class="tags"><li>PHP</li><li>Laravel</li><li>CodeIgniter</li><li>Node.js</li><li>Python</li><li>Perl</li><li>APIs REST</li></ul>
+            <ul class="tags"><li>PHP</li><li>Laravel</li><li>CodeIgniter</li><li>Node.js</li><li>Express</li><li>Python</li><li>Perl</li><li>APIs REST</li><li>JWT</li></ul>
           </article>
 
           <article class="skill-card reveal">
@@ -771,7 +839,7 @@
               <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-layout"></use></svg>
             </div>
             <h3>Frontend</h3>
-            <ul class="tags"><li>JavaScript</li><li>React</li><li>Angular</li><li>HTML5</li><li>CSS3</li><li>Bootstrap</li><li>jQuery</li><li>AJAX</li></ul>
+            <ul class="tags"><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Angular</li><li>Next.js</li><li>Vue.js</li><li>Vite</li><li>Tailwind CSS</li><li>HTML5</li><li>CSS3</li><li>Bootstrap</li><li>jQuery</li><li>AJAX</li></ul>
           </article>
 
           <article class="skill-card reveal">
@@ -789,7 +857,7 @@
             <h3>Cloud y DevOps</h3>
             <ul class="tags">
               <li>AWS</li><li>Lambda</li><li>SQS</li><li>API Gateway</li><li>ECS</li><li>EKS</li>
-              <li>Step Functions</li><li>EventBridge</li><li>EC2</li><li>CloudWatch</li><li>Docker</li><li>Git</li>
+              <li>Step Functions</li><li>EventBridge</li><li>EC2</li><li>CloudWatch</li><li>Docker</li><li>Supabase</li><li>Git</li>
             </ul>
           </article>
 
@@ -807,6 +875,14 @@
             </div>
             <h3>Datos y sistemas</h3>
             <ul class="tags"><li>GPS</li><li>Telemetría</li><li>Geolocalización</li><li>Linux</li><li>Windows</li><li>VMware</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">
+              <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-cpu"></use></svg>
+            </div>
+            <h3>IA y automatización</h3>
+            <ul class="tags"><li>Ollama</li><li>Qwen2.5</li><li>Qwen2.5-VL</li><li>Ornith</li><li>DeepSeek</li><li>Agentes IA</li><li>Automatización</li></ul>
           </article>
         </div>
       </div>

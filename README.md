@@ -95,10 +95,12 @@ del perfil: **GPS, telemetría y monitoreo en tiempo real**.
 Cabecera fija        marca · navegación por secciones · botón de tema · botón "CV PDF"
 Hero                 nombre → rol → resumen → ubicación → CTA (PDF) → enlaces → stack principal
 01 Perfil            relato profesional + tarjeta de datos rápidos
-02 Experiencia       timeline: Sitrack México, Freelance (T7Group / CÍMAC), STI Solutions,
-                     Grupo Digital Systems, CIMAC, experiencia previa
+02 Experiencia       timeline: ClinovaMex (proyecto propio), Sitrack México,
+                     Freelance (T7Group / CÍMAC), STI Solutions, Grupo Digital Systems,
+                     CIMAC, experiencia previa
 03 Proyectos         tarjetas: Farmacia Dulce Esperanza, Sistema de monitoreo GPS, RoadSentinel
-04 Habilidades       seis categorías: backend, frontend, bases de datos, cloud, integraciones, datos
+04 Habilidades       siete categorías: backend, frontend, bases de datos, cloud, integraciones,
+                     datos e IA/automatización
 05 Educación         UNAM + nota de experiencia previa
 06 Contacto          correo, GitHub, LinkedIn, ubicación + CTA de descarga
 Pie                  autoría y enlaces
