@@ -56,10 +56,7 @@
 
     header.cv-head {
       position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 20px;
+      display: block;
       padding-bottom: 11px;
       margin-bottom: 17px;
       break-inside: avoid;
@@ -83,7 +80,7 @@
     }
 
     h1 {
-      font-size: 20pt;
+      font-size: 16.5pt;
       font-weight: 800;
       letter-spacing: -0.025em;
       line-height: 1.08;
@@ -91,22 +88,25 @@
 
     .rol {
       color: var(--acento);
-      font-size: 10.4pt;
+      font-size: 9.8pt;
       font-weight: 700;
       letter-spacing: 0.01em;
       margin-top: 4px;
     }
 
     .contacto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 18px;
       font-family: var(--mono);
-      font-size: 8.2pt;
-      line-height: 1.65;
+      font-size: 7.4pt;
+      line-height: 1.6;
       color: var(--suave);
-      text-align: right;
-      white-space: nowrap;
+      text-align: left;
+      margin-top: 5px;
     }
 
-    .contacto span { display: block; }
+    .contacto span { display: inline-flex; align-items: center; }
 
     .contacto span::before {
       content: "";
@@ -358,6 +358,7 @@
     </div>
     <p class="contacto">
       <span>Ciudad de México, México</span>
+      <span>Remoto, híbrido o presencial</span>
       <span>+52 55 4253 8243</span>
       <span>sarkoceles@ciencias.unam.mx</span>
       <span>linkedin.com/in/miguel-angel-mendoza-enríquez-604574238</span>
@@ -728,6 +729,7 @@
       <div>
         <h3>Universidad Nacional Autónoma de México (UNAM)</h3>
         <p class="nota">Estudios de licenciatura en computación y tecnologías de la información · UNAM (carrera sin concluir)</p>
+        <p class="nota">Idiomas: Español nativo · Inglés: lectura técnica.</p>
       </div>
       <div>
         <p>
