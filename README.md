@@ -98,7 +98,7 @@ Hero                 nombre → rol → resumen → ubicación → CTA (PDF) →
 02 Experiencia       timeline: ClinovaMex (proyecto propio), Sitrack México,
                      Freelance (T7Group / CÍMAC), STI Solutions, Grupo Digital Systems,
                      CIMAC, experiencia previa
-03 Proyectos         tarjetas: Farmacia Dulce Esperanza, Sistema de monitoreo GPS, RoadSentinel
+03 Proyectos         tarjetas: ClinovaMex, Sistema de monitoreo GPS, RoadSentinel
 04 Habilidades       siete categorías: backend, frontend, bases de datos, cloud, integraciones,
                      datos e IA/automatización
 05 Educación         UNAM + nota de experiencia previa
@@ -303,7 +303,7 @@ quedan por resolver son los de la tabla, todos ellos de contenido de proyectos.
 | LinkedIn | `index.html`, `cv/print.html` y el `README.md` del repo de perfil | Ya configurado: `linkedin.com/in/miguel-angel-mendoza-enríquez-604574238` |
 | Correo | `index.html`, `cv/print.html` y el `README.md` del repo de perfil | Ya configurado: `sarkoceles@ciencias.unam.mx` |
 | Enlaces `Repositorio` de cada proyecto | `index.html`, sección Proyectos, y la tabla del `README.md` de perfil | URL de cada repositorio |
-| `Demo` de cada proyecto | `index.html`: `<span class="project-link is-disabled">` | Convertir en `<a href="…">` cuando exista demo. Farmacia Dulce Esperanza ya apunta a `https://farma-web-rho.vercel.app/` |
+| `Demo` de cada proyecto | `index.html`: `<span class="project-link is-disabled">` | Convertir en `<a href="…">` cuando exista demo. ClinovaMex ya apunta a `https://farma-web-rho.vercel.app/` |
 | `Estado` de cada proyecto | `index.html`: bloque comentado `<span class="status">` | Descomentar y fijar el valor real |
 | `apple-touch-icon.png` | `assets/img/` | Se regenera con `scripts/generate-assets.sh` |
 | URLs `raw.githubusercontent.com/Kvosarkoceles/Kvosarkoceles/main/assets/…` | `README.md` del repo de perfil (banner, divisor y pie) | Se usan URLs absolutas porque GitHub no siempre resuelve rutas relativas al mostrar el README en el perfil. Si cambias de rama o de usuario, actualiza esas referencias |

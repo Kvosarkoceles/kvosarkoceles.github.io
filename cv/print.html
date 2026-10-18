@@ -252,6 +252,7 @@
       font-size: 7.8pt;
       line-height: 1.5;
       color: var(--suave);
+      break-inside: avoid;
       margin-top: 7px;
       padding: 4px 9px;
       background: var(--panel);
@@ -384,7 +385,7 @@
 
 
 
-    <article class="puesto">
+    <article class="puesto" style="break-inside: auto">
       <div class="puesto-head">
         <div>
           <h3>Desarrollador Full Stack</h3>
@@ -424,18 +425,25 @@
           </ul>
         </div>
         <div>
-          <h4>Infraestructura, IA y automatización</h4>
+          <h4>Infraestructura y operación</h4>
           <ul>
             <li>Entornos local, test y producción con Docker Compose y scripts de automatización en Bash.</li>
             <li>PostgreSQL gestionado con Supabase y almacenamiento de imágenes.</li>
-            <li>Agentes de IA con modelos locales en Ollama: Qwen2.5 14B para código y datos, Ornith 9B general y Qwen2.5-VL 7B para visión.</li>
-            <li>Coordinación con DeepSeek como supervisor y un bot de Telegram para ejecutar y dar seguimiento a tareas.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Herramientas de IA</h4>
+          <ul>
+            <li>opencode como entorno de agentes, con supervisor y subagentes especializados.</li>
+            <li>Ollama para servir modelos locales: Qwen2.5 14B (código y datos), Qwen2.5-VL 7B (visión) y Ornith 9B (general).</li>
+            <li>DeepSeek para planificación, revisión y resolución de bloqueos.</li>
+            <li>Playwright MCP para validar interfaces y flujos en el navegador.</li>
+            <li>Automatización con bot de Telegram, systemd y scripts en Bash.</li>
           </ul>
         </div>
       </div>
       <p class="stack">
-        React · Vite · Tailwind CSS · TypeScript · Node.js · Express · PostgreSQL · Supabase ·
-        Docker · Ollama · Qwen2.5 · DeepSeek · REST API · Swagger · JWT · Bash
+        React · TypeScript · Node.js · Express · PostgreSQL · Supabase · Docker · Ollama · DeepSeek · JWT
       </p>
     </article>
 
@@ -641,15 +649,16 @@
     <h2>Proyectos</h2>
 
     <article class="proyecto">
-      <h3>Farmacia Dulce Esperanza</h3>
-      <p class="tipo">Sistema Full Stack para administración de farmacia y consultorio</p>
+      <h3>ClinovaMex</h3>
+      <p class="tipo">Plataforma multi-tenant para farmacias y consultorios</p>
       <p>
-        Sistema para la administración de una farmacia y su consultorio: gestión de pacientes,
-        agenda de citas, inventario y autenticación, con API REST documentada y base de datos
-        relacional. Funcionalidades: pacientes, clientes, médicos, citas, consultas, servicios,
-        productos, recetas, inventario, autenticación y configuración de farmacia.
+        Plataforma para la gestión de farmacias y consultorios: inventario, ventas, pacientes,
+        citas, recetas, pólizas y administración de sucursales, con API REST documentada, panel de
+        plataforma y permisos por rol. Funcionalidades: pacientes, clientes, médicos, citas,
+        consultas, servicios, productos, recetas, inventario, ventas, pólizas, reportes, roles y
+        permisos, sucursales y auditoría.
       </p>
-      <p class="stack">React · Vite · Node.js · Express · PostgreSQL · Supabase · JavaScript · REST API · Swagger</p>
+      <p class="stack">React · Vite · Tailwind CSS · TypeScript · Node.js · Express · PostgreSQL · Supabase · Docker · REST API · Swagger · JWT</p>
       <p class="enlace">Demo: <span>farma-web-rho.vercel.app</span></p>
     </article>
 
@@ -704,7 +713,7 @@
       </div>
       <div>
         <dt>IA y automatización</dt>
-        <dd>Ollama, Qwen2.5, Qwen2.5-VL, Ornith, DeepSeek, agentes IA, automatización de tareas</dd>
+        <dd>opencode, Ollama, Qwen2.5, Qwen2.5-VL, Ornith, DeepSeek, Playwright MCP, agentes IA, automatización de tareas</dd>
       </div>
     </div>
   </section>

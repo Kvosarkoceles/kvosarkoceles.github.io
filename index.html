@@ -52,7 +52,7 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261018" />
 
   <!-- Evita el parpadeo de tema (se ejecuta antes del primer pintado) -->
   <script>
@@ -383,12 +383,20 @@
                   </ul>
                 </div>
                 <div>
-                  <h4>Infraestructura, IA y automatización</h4>
+                  <h4>Infraestructura y operación</h4>
                   <ul>
                     <li>Entornos <strong>local, test y producción</strong> con <strong>Docker Compose</strong> y scripts de automatización en Bash.</li>
                     <li>PostgreSQL gestionado con <strong>Supabase</strong> y almacenamiento de imágenes.</li>
-                    <li>Agentes de IA con <strong>modelos locales en Ollama</strong>: <strong>Qwen2.5 14B</strong> para código y datos, <strong>Ornith 9B</strong> general y <strong>Qwen2.5-VL 7B</strong> para visión.</li>
-                    <li>Coordinación con <strong>DeepSeek</strong> como supervisor y un bot de <strong>Telegram</strong> para ejecutar y dar seguimiento a tareas.</li>
+                  </ul>
+                </div>
+                <div class="job-group-wide">
+                  <h4>Herramientas de IA</h4>
+                  <ul>
+                    <li><strong>opencode</strong> como entorno de agentes, con supervisor y subagentes especializados.</li>
+                    <li><strong>Ollama</strong> para servir modelos locales: <strong>Qwen2.5 14B</strong> (código y datos), <strong>Qwen2.5-VL 7B</strong> (visión) y <strong>Ornith 9B</strong> (general).</li>
+                    <li><strong>DeepSeek</strong> para planificación, revisión y resolución de bloqueos.</li>
+                    <li><strong>Playwright MCP</strong> para validar interfaces y flujos en el navegador.</li>
+                    <li>Automatización con bot de <strong>Telegram</strong>, <strong>systemd</strong> y scripts en <strong>Bash</strong>.</li>
                   </ul>
                 </div>
               </div>
@@ -396,7 +404,8 @@
               <ul class="tags" aria-label="Tecnologías utilizadas">
                 <li>React</li><li>Vite</li><li>Tailwind CSS</li><li>TypeScript</li><li>Node.js</li>
                 <li>Express</li><li>PostgreSQL</li><li>Supabase</li><li>Docker</li>
-                <li>Ollama</li><li>Qwen2.5</li><li>DeepSeek</li>
+                <li>opencode</li><li>Ollama</li><li>Qwen2.5</li><li>DeepSeek</li>
+                <li>Playwright MCP</li><li>Agentes IA</li>
                 <li>REST API</li><li>Swagger</li><li>JWT</li><li>Bash</li>
               </ul>
             </article>
@@ -662,31 +671,32 @@
                 <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-db"></use></svg>
               </div>
               <div>
-                <h3>Farmacia Dulce Esperanza</h3>
-                <p class="project-type">Sistema Full Stack · Farmacia y consultorio</p>
+                <h3>ClinovaMex</h3>
+                <p class="project-type">Plataforma multi-tenant · Farmacia y consultorio</p>
               </div>
             </header>
 
             <p>
-              Sistema para la administración de una farmacia y su consultorio: gestión de pacientes,
-              agenda de citas, inventario y autenticación, con una API REST documentada y base de
-              datos relacional.
+              Plataforma para la gestión de farmacias y consultorios: inventario, ventas, pacientes,
+              citas, recetas, pólizas y administración de sucursales, con API REST documentada,
+              panel de plataforma y permisos por rol.
             </p>
 
             <div class="project-block">
               <h4>Funcionalidades</h4>
               <ul class="tags tags-soft">
                 <li>Pacientes</li><li>Clientes</li><li>Médicos</li><li>Citas</li><li>Consultas</li>
-                <li>Servicios</li><li>Productos</li><li>Recetas</li><li>Inventario</li>
-                <li>Autenticación</li><li>Configuración de farmacia</li>
+                <li>Servicios</li><li>Productos</li><li>Recetas</li><li>Inventario</li><li>Ventas</li>
+                <li>Pólizas</li><li>Reportes</li><li>Roles y permisos</li><li>Sucursales</li><li>Auditoría</li>
               </ul>
             </div>
 
             <div class="project-block">
               <h4>Tecnologías</h4>
               <ul class="tags" aria-label="Tecnologías del proyecto">
-                <li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li>
-                <li>Supabase</li><li>JavaScript</li><li>REST API</li><li>Swagger</li>
+                <li>React</li><li>Vite</li><li>Tailwind CSS</li><li>TypeScript</li><li>Node.js</li>
+                <li>Express</li><li>PostgreSQL</li><li>Supabase</li><li>Docker</li>
+                <li>REST API</li><li>Swagger</li><li>JWT</li>
               </ul>
             </div>
 
@@ -703,7 +713,7 @@
             <!-- Estructura de metadatos del proyecto: cambia los href y, si quieres mostrar
                  el estado, descomenta el bloque <span class="status"> y ajusta el texto. -->
             <footer class="project-foot">
-              <a class="project-link" href="https://github.com/Kvosarkoceles" target="_blank" rel="noopener noreferrer">
+              <a class="project-link" href="https://github.com/Kvosarkoceles/clinovamex" target="_blank" rel="noopener noreferrer">
                 Repositorio
                 <svg class="ic" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-external"></use></svg>
               </a>
@@ -882,7 +892,7 @@
               <svg class="ic" focusable="false"><use href="assets/icons/sprite.svg#i-cpu"></use></svg>
             </div>
             <h3>IA y automatización</h3>
-            <ul class="tags"><li>Ollama</li><li>Qwen2.5</li><li>Qwen2.5-VL</li><li>Ornith</li><li>DeepSeek</li><li>Agentes IA</li><li>Automatización</li></ul>
+            <ul class="tags"><li>opencode</li><li>Ollama</li><li>Qwen2.5</li><li>Qwen2.5-VL</li><li>Ornith</li><li>DeepSeek</li><li>Playwright MCP</li><li>Agentes IA</li><li>Automatización</li></ul>
           </article>
         </div>
       </div>
